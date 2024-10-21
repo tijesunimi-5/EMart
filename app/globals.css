@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
@@ -24,4 +24,37 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.hero-images {
+  width: 375px;
+  height: 300px;
+  animation: animate 10s ease-in-out infinite;
+  background-size: cover;
+}
+@keyframes animate {
+  0%,100% {
+    background: url('/watch001.jpg'), no-repeat;
+    background-size: cover;
+  }
+  50% {
+    background: url('/watch002.jpg'), no-repeat;
+    background-size: cover;
+    background-position-y: -100px;
+  }
+}
+
+.overlay {
+  background: rgba(6, 20, 27, 0.4);
+  width: 375px;
+  height: 210px;
+  position: absolute;
+  top: 0;
+}
+.card {
+  background-image: linear-gradient(45deg, #06141B, #253745, #06141B, #CCD0CF);
+  box-shadow: 1px 1px 5px 1px #9BABAB;
+}
+.linear-bg {
+  background-image: linear-gradient(45deg, #4A5C5A, #06141B, #11212D, #06141B, #CCD0CF);
 }
