@@ -119,7 +119,14 @@ export default function Home() {
         </div>
 
         {/**Contact section...... */}
-        
+        <div className="linear-bg mt-20">
+          <h1>Contact Us</h1>
+          <form>
+            <div>
+              <label htmlFor="email">Email:</label>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
