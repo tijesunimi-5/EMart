@@ -31,7 +31,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-main-bg  pt-10 relative h-[300vh]">
+    <div className="bg-main-bg  pt-10 relative h-[330vh]">
       <div className=" text-white">
         {/**Hero section */}
         <div className=" relative">
@@ -44,7 +44,7 @@ export default function Home() {
             </p>
 
             <div className="w-[300px] mt-10 text-center">
-              <Link href={"/"}>
+              <Link href={"/product"}>
                 <button onClick={fetchProduct} className="btn">
                   Shop Now!
                 </button>
@@ -103,7 +103,9 @@ export default function Home() {
                     </p>
 
                     <div className="pb-2">
-                      <Button>Shop now</Button>
+                      <Link href={"/product"}>
+                        <Button>Shop now</Button>
+                      </Link>
                     </div>
                   </div>
                 </Card>
