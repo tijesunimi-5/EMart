@@ -3,11 +3,35 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
+import axios from "axios";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [product, setProduct] = useState([]);
+
+  {/**This fetches products from FAKE STORE API */}
+  const fetchProduct = async () => {
+    const url = "https://fakestoreapi.com/products/category/electronics";
+
+    try {
+      const response = await axios.get(url);
+      const result = response.data;
+
+      //Filter gadgets based on keywords in titles
+      const phones = result.filter(item => item.title.toLowerCase().includes('samsung') || item.description.toLowerCase().includes('samsung'))
+      console.log(phones)
+    } catch (error) {
+      console.error("Error while fetching:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchProduct();
+  }, []);
+
   return (
-    <div className="bg-main-bg h-[300vh] pt-10 relative">
+    <div className="bg-main-bg  pt-10 relative h-[300vh]">
       <div className=" text-white">
         {/**Hero section */}
         <div className=" relative">
@@ -21,7 +45,9 @@ export default function Home() {
 
             <div className="w-[300px] mt-10 text-center">
               <Link href={"/"}>
-                <Button>Shop Now!</Button>
+                <button onClick={fetchProduct} className="btn">
+                  Shop Now!
+                </button>
               </Link>
             </div>
           </div>
@@ -41,8 +67,8 @@ export default function Home() {
             Check out our collections and make a choice, them buy
           </h1>
 
-          <div className="w-[350px] h-[380px] rounded-md overflow-x-scroll overflow-hidden ">
-            <div className="flex gap-6 w-[650px]">
+          <div className="w-[350px] h-[400px] rounded-md overflow-x-scroll overflow-hidden ">
+            <div className="flex gap-6  w-[650px]">
               <div className="w-[300px] ml-4">
                 <Card>
                   <img src="/watch001.jpg" className="rounded-md" />
@@ -55,7 +81,7 @@ export default function Home() {
                       you!
                     </p>
 
-                    <div className="pb-2">
+                    <div className="pb-2 ml-[0px]">
                       <Link href={"/product"}>
                         <Button>Shop now</Button>
                       </Link>
@@ -119,13 +145,38 @@ export default function Home() {
         </div>
 
         {/**Contact section...... */}
-        <div className="linear-bg mt-20">
-          <h1>Contact Us</h1>
-          <form>
-            <div>
-              <label htmlFor="email">Email:</label>
+        <div>
+          <div className="neumorphism mt-20 ml-8">
+            <div className="py-3 ">
+              <h1 className="text-center text-xl font-bold ">Contact Us</h1>
+              <form className="px-3 py-3">
+                <div>
+                  <label htmlFor="email" className="pr-2">
+                    Email:
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="input w-[200px] pl-2"
+                  />
+                </div>
+
+                <div className="mt-3">
+                  <label htmlFor="message" className="pr-2">
+                    Message:
+                  </label>
+                  <textarea
+                    type="text"
+                    id="message"
+                    className="input w-[260px] h-16 pl-2"
+                  ></textarea>
+                </div>
+                <div className="ml-20 mt-5">
+                  <Button>Submit</Button>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

@@ -33,12 +33,13 @@ body {
   background-size: cover;
 }
 @keyframes animate {
-  0%,100% {
-    background: url('/watch001.jpg'), no-repeat;
+  0%,
+  100% {
+    background: url("/watch001.jpg"), no-repeat;
     background-size: cover;
   }
   50% {
-    background: url('/watch002.jpg'), no-repeat;
+    background: url("/watch002.jpg"), no-repeat;
     background-size: cover;
     background-position-y: -100px;
   }
@@ -52,9 +53,73 @@ body {
   top: 0;
 }
 .card {
-  background-image: linear-gradient(45deg, #06141B, #253745, #06141B, #CCD0CF);
-  box-shadow: 1px 1px 5px 1px #9BABAB;
+  background: #11212d;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #253745, -7px -7px 15px #11212D;
 }
 .linear-bg {
-  background-image: linear-gradient(45deg, #4A5C5A, #06141B, #11212D, #06141B, #CCD0CF);
+  background-image: linear-gradient(
+    45deg,
+    #4a5c5a,
+    #06141b,
+    #11212d,
+    #06141b,
+    #ccd0cf
+  );
+}
+
+/* .input {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+} */
+/* .input {
+  background: #444;
+  border-radius: 20px;
+  box-shadow:  5px 5px 10px #333,  -5px -5px 10px #555;
+  padding: 20px;
+} */
+.neumorphism {
+  width: 300px;
+  background: #11212d;
+  border-radius: 10px;
+  animation: neon 5s infinite;
+}
+@keyframes neon {
+  0% {
+    box-shadow: 2px 2px 15px #253745, -7px -7px 15px #11212D;
+  }
+  50% {
+    box-shadow: 5px 5px 15px #253745, -10px -10px 15px #11212D;
+  }
+  100% {
+    box-shadow: 2px 2px 15px #253745, -7px -7px 15px #11212D;
+  }
+}
+.input {
+  background: #11212d;
+  border-radius: 7px;
+  box-shadow: inset 1px 1px 7px #253745, inset -3px -3px 10px #11212D;
+  
+}
+.button {
+  width: 100px;
+  padding-y: 20px;
+  background: #11212d;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #253745, -7px -7px 15px #11212D;
+}
+.neu-text {
+  color: #11212d;
+  text-shadow: 2px 2px 15px #253745, -7px -7px 15px #11212D;
+}
+.btn {
+  background: transparent;
+  backdrop-filter: blur(70px);
+  border-radius: 7px;
+  border: 1px solid #fff;
+  padding-right: 5px;
+  padding-left: 5px;
 }
