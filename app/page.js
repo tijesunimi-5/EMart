@@ -3,24 +3,29 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
+import { GetAllProduct } from "@/data/product";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [product, setProduct] = useState([]);
+  // const  products  = GetAllProduct();
+  // const data = JSON.stringify(products)
+  // console.log(data);
 
-  {/**This fetches products from FAKE STORE API */}
+  {
+    /**This fetches products from FAKE STORE API */
+  }
   const fetchProduct = async () => {
     const url = "https://fakestoreapi.com/products/category/electronics";
 
     try {
       const response = await axios.get(url);
-      const result = response.data;
+      const { result } = response.data;
 
-      //Filter gadgets based on keywords in titles
-      const phones = result.filter(item => item.title.toLowerCase().includes('samsung') || item.description.toLowerCase().includes('samsung'))
-      console.log(phones)
+      console.log(result);
+      setProduct(result);
     } catch (error) {
       console.error("Error while fetching:", error);
     }
@@ -35,7 +40,8 @@ export default function Home() {
       <div className=" text-white">
         {/**Hero section */}
         <div className=" relative">
-          {/* <video src="/EMart.mp4" muted autoPlay loop></video> */}<img src="phone.jpg" alt="phone" className="hero-images" />
+          <video src="/EMart.mp4" muted autoPlay loop></video>
+          {/* <img src="phone.jpg" alt="phone" className="hero-images" /> */}
           <div className="overlay"></div>
           <div className="absolute top-20 left-9">
             <p className=" w-[300px] text-center font-bold">
@@ -94,11 +100,13 @@ export default function Home() {
                 <Card>
                   <img src="/console.jpg" className="image rounded-md" />
                   <div>
-                    <h1 className="text-xl font-bold">Electronics collection</h1>
+                    <h1 className="text-xl font-bold">
+                      Electronics collection
+                    </h1>
 
                     <p className="text-start mb-4 mx-3 mt-2">
-                      Are you interested in getting a electronic gadget? Check out what we have in store for
-                      you!
+                      Are you interested in getting a electronic gadget? Check
+                      out what we have in store for you!
                     </p>
 
                     <div className="pb-2">
