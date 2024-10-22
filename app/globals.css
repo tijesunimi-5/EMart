@@ -28,8 +28,8 @@ body {
 
 .hero-images {
   width: 375px;
-  height: 300px;
-  animation: animate 10s ease-in-out infinite;
+  height: 250px;
+  /* animation: animate 10s ease-in-out infinite; */
   background-size: cover;
 }
 @keyframes animate {
@@ -48,7 +48,7 @@ body {
 .overlay {
   background: rgba(6, 20, 27, 0.4);
   width: 375px;
-  height: 210px;
+  height: 250px;
   position: absolute;
   top: 0;
 }
@@ -117,9 +117,13 @@ body {
 }
 .btn {
   background: transparent;
-  backdrop-filter: blur(70px);
+  backdrop-filter: blur(90px);
   border-radius: 7px;
   border: 1px solid #fff;
   padding-right: 5px;
   padding-left: 5px;
+}
+.image {
+  width: 350px;
+  height: 200px;
 }

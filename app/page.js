@@ -31,13 +31,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-main-bg  pt-10 relative h-[330vh]">
+    <div className="bg-main-bg  pt-10  h-[340vh]">
       <div className=" text-white">
         {/**Hero section */}
         <div className=" relative">
-          <video src="/EMart.mp4" muted autoPlay loop></video>
+          {/* <video src="/EMart.mp4" muted autoPlay loop></video> */}<img src="phone.jpg" alt="phone" className="hero-images" />
           <div className="overlay"></div>
-          <div className="absolute top-10 left-9">
+          <div className="absolute top-20 left-9">
             <p className=" w-[300px] text-center font-bold">
               Welcome to your premier destination for the latest and greatest
               gadgets.
@@ -71,7 +71,7 @@ export default function Home() {
             <div className="flex gap-6  w-[650px]">
               <div className="w-[300px] ml-4">
                 <Card>
-                  <img src="/watch001.jpg" className="rounded-md" />
+                  <img src="/gadgets.jpg" className="rounded-md" />
                   <div>
                     <h1 className="text-xl font-bold">Gadgets collection</h1>
 
@@ -92,13 +92,12 @@ export default function Home() {
 
               <div className="w-[300px]">
                 <Card>
-                  <img src="/watch001.jpg" className="rounded-md" />
+                  <img src="/console.jpg" className="image rounded-md" />
                   <div>
-                    <h1 className="text-xl font-bold">Gadgets collection</h1>
+                    <h1 className="text-xl font-bold">Electronics collection</h1>
 
                     <p className="text-start mb-4 mx-3 mt-2">
-                      Are you interested in getting a gadget like a phone,
-                      laptop, tablet.... Check out what we have in store for
+                      Are you interested in getting a electronic gadget? Check out what we have in store for
                       you!
                     </p>
 
