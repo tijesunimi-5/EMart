@@ -17,19 +17,19 @@ const page = () => {
 
         <div className="mt-10 text-start px-8">
           <div>
-            <h1 className="text-3xl font-bold">Phones</h1>
+            <h1 className="text text-3xl font-bold">Phones</h1>
           </div>
 
           <div className="mt-8">
-            <h1 className="text-3xl font-bold">Laptops</h1>
+            <h1 className="text text-3xl font-bold">Laptops</h1>
           </div>
 
           <div className="mt-8">
-            <h1 className="text-3xl font-bold">Television</h1>
+            <h1 className="text text-3xl font-bold">Television</h1>
           </div>
 
           <div className="mt-8">
-            <h1 className="text-3xl font-bold">Others</h1>
+            <h1 className="text text-3xl font-bold">Others</h1>
           </div>
         </div>
       </div>
