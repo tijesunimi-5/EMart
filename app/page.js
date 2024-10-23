@@ -40,8 +40,8 @@ export default function Home() {
       <div className=" text-white">
         {/**Hero section */}
         <div className=" relative">
-          <video src="/EMart.mp4" muted autoPlay loop></video>
-          {/* <img src="phone.jpg" alt="phone" className="hero-images" /> */}
+          {/* <video src="/EMart.mp4" muted autoPlay loop></video> */}
+          <img src="phone.jpg" alt="phone" className="hero-images" />
           <div className="overlay"></div>
           <div className="absolute top-20 left-9">
             <p className=" w-[300px] text-center font-bold">
