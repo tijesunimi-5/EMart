@@ -3,7 +3,7 @@ import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaTwitterSquare } from
 
 const Footer = () => {
   return (
-    <footer className="text-white text-center absolute bottom-0 h-[30vh] rounded-tr-2xl rounded-tl-2xl card  ">
+    <footer className="text-white text-center relative bottom-0 h-[30vh] border-t bg-main-bg  ">
       <div>
         <h1 className="text-center  text-4xl font-bold pt-5 ">EMart</h1>
         <p className="text-xl px-3 font-semibold pt-4">

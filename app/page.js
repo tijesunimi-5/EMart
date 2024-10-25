@@ -18,25 +18,42 @@ export default function Home() {
     /**This fetches products from FAKE STORE API */
   }
   const fetchProduct = async () => {
-    const url = "https://fakestoreapi.com/products/category/electronics";
+    const url = "https://fakestoreapi.com/products";
 
     try {
       const response = await axios.get(url);
-      const { result } = response.data;
+      const { products } = response.data;
 
-      console.log(result);
-      setProduct(result);
+      console.log(products);
+      setProduct(products);
     } catch (error) {
       console.error("Error while fetching:", error);
     }
   };
 
+  // const fetchProduct = async () => {
+  //   const url = "https://dummyjson.com/products";
+
+  //   try {
+  //     const response = await axios.get(url);
+  //     const { products } = response.data;
+
+  //     console.log(response);
+  //     setProduct(products);
+  //   } catch (error) {
+  //     console.error("Error while fetching:", error);
+  //   }
+  // };1
+
   useEffect(() => {
     fetchProduct();
   }, []);
 
+  // const productPic = GetAllProduct();
+  // const string = JSON.stringify(productPic)
+
   return (
-    <div className="bg-main-bg  pt-10  h-[340vh]">
+    <div className="bg-main-bg  pt-10  h-[320vh]">
       <div className=" text-white">
         {/**Hero section */}
         <div className=" relative">
@@ -59,7 +76,15 @@ export default function Home() {
           </div>
         </div>
 
+
         {/**Welcome section...... */}
+        <ul>
+          {product.map((pro) => (
+            <li key={pro.id}>
+              <img src={pro.thumbnail} />
+            </li>
+          ))}
+        </ul>
         <div className="pt-10 px-3">
           <p>
             We are passionate about bringing you the most innovative and

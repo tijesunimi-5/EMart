@@ -102,7 +102,8 @@ body {
 .input {
   background: #11212d;
   border-radius: 7px;
-  -webkit-box-shadow: inset 2px 2px 7px #000, inset -2px -2px 7px #253745;
+  -webkit-box-shadow: inset 2px 2px 9px #000, inset -2px -2px 2px #253745;
+  border: 0.02px solid #fff;
   
 }
 .button {
