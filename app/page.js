@@ -17,19 +17,19 @@ export default function Home() {
   {
     /**This fetches products from FAKE STORE API */
   }
-  const fetchProduct = async () => {
-    const url = "https://fakestoreapi.com/products";
+  // const fetchProduct = async () => {
+  //   const url = "https://fakestoreapi.com/products";
 
-    try {
-      const response = await axios.get(url);
-      const { products } = response.data;
+  //   try {
+  //     const response = await axios.get(url);
+  //     const { products } = response.data;
 
-      console.log(products);
-      setProduct(products);
-    } catch (error) {
-      console.error("Error while fetching:", error);
-    }
-  };
+  //     console.log(products);
+  //     setProduct(products);
+  //   } catch (error) {
+  //     console.error("Error while fetching:", error);
+  //   }
+  // };
 
   // const fetchProduct = async () => {
   //   const url = "https://dummyjson.com/products";
@@ -45,9 +45,9 @@ export default function Home() {
   //   }
   // };1
 
-  useEffect(() => {
-    fetchProduct();
-  }, []);
+  // useEffect(() => {
+  //   fetchProduct();
+  // }, []);
 
   // const productPic = GetAllProduct();
   // const string = JSON.stringify(productPic)
@@ -68,7 +68,7 @@ export default function Home() {
 
             <div className="w-[300px] mt-10 text-center">
               <Link href={"/product"}>
-                <button onClick={fetchProduct} className="btn">
+                <button className="btn">
                   Shop Now!
                 </button>
               </Link>
@@ -78,13 +78,13 @@ export default function Home() {
 
 
         {/**Welcome section...... */}
-        <ul>
+        {/* <ul>
           {product.map((pro) => (
             <li key={pro.id}>
               <img src={pro.thumbnail} />
             </li>
           ))}
-        </ul>
+        </ul> */}
         <div className="pt-10 px-3">
           <p>
             We are passionate about bringing you the most innovative and
