@@ -34,7 +34,7 @@ const Dashboard = () => {
         </div>
 
         <div className="border-b border-white mt-5" onClick={closeDashboard}>
-          <Link href={"/about-us"} className="flex">
+          <Link href={"/#about-us"} className="flex">
             <FaInfo className="mx-4 text-2xl mt-1" />
             <span className="font-bold text-3xl ">About Us</span>
           </Link>

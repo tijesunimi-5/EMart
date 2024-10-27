@@ -131,3 +131,79 @@ body {
   width: 350px;
   height: 200px;
 }
+
+@media (min-width: 414px) {
+  .hero-images, .overlay {
+    width: 414px;
+  }
+  .hero-text {
+    margin-left: 30px;
+  }
+  .btn {
+    margin-left: 50px;
+  }
+  .info-text {
+    width: 390px;
+  }
+  .info-card-div {
+    width: 390px;
+  }
+  .contact {
+    width: 350px;
+  }
+  .input {
+    width: 320px
+  }
+  .form-btn {
+    margin-left: 110px;
+  }
+  .social {
+    width: 310px;
+  }
+}
+@media (min-width: 390px) {
+  .hero-images {
+    width: 390px;
+  }
+  .overlay {
+    width: 390px;
+  }
+  .hero-text {
+    margin-left: 10px;
+  }
+  .contact{
+    width: 325px;
+  }
+  .input {
+    width: 299px;
+  }
+  .form-btn {
+    margin-left: 100px;
+  }
+  .social {
+    width: 280px;
+  }
+}
+
+@media (min-width: 430px) {
+  .hero-images, .overlay {
+    width: 430px;
+  }
+  .hero-text {
+    margin-left: 30px;
+  }
+  .info-text {
+    width: 420px;
+  }
+  .contact {
+    width: 365px;
+  }
+  .input {
+    width: 340px;
+  }
+}
+@media (min-width: 820px) {
+  .hero-images, .overlay {
+    width: 820px;
+  }
+}
