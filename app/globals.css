@@ -106,8 +106,7 @@ body {
   -moz-box-shadow: inset 2px 2px 9px #000, inset -2px -2px 2px #253745;
   -ms-box-shadow: inset 2px 2px 9px #000, inset -2px -2px 2px #253745;
   -o-box-shadox: inset 2px 2px 9px #000, inset -2px -2px 2px #253745;
-  border: 0.02px solid #fff;
-  
+  /* border: 0.02px solid #fff; */
 }
 .button {
   width: 100px;
