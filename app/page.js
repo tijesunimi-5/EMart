@@ -9,48 +9,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [product, setProduct] = useState([]);
-  // const  products  = GetAllProduct();
-  // const data = JSON.stringify(products)
-  // console.log(data);
-
-  {
-    /**This fetches products from FAKE STORE API */
-  }
-  // const fetchProduct = async () => {
-  //   const url = "https://fakestoreapi.com/products";
-
-  //   try {
-  //     const response = await axios.get(url);
-  //     const { products } = response.data;
-
-  //     console.log(products);
-  //     setProduct(products);
-  //   } catch (error) {
-  //     console.error("Error while fetching:", error);
-  //   }
-  // };
-
-  // const fetchProduct = async () => {
-  //   const url = "https://dummyjson.com/products";
-
-  //   try {
-  //     const response = await axios.get(url);
-  //     const { products } = response.data;
-
-  //     console.log(response);
-  //     setProduct(products);
-  //   } catch (error) {
-  //     console.error("Error while fetching:", error);
-  //   }
-  // };1
-
-  // useEffect(() => {
-  //   fetchProduct();
-  // }, []);
-
-  // const productPic = GetAllProduct();
-  // const string = JSON.stringify(productPic)
+  
 
   return (
     <div className="bg-main-bg  pt-10  ">
