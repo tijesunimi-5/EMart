@@ -69,19 +69,7 @@ body {
   );
 }
 
-/* .input {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-} */
-/* .input {
-  background: #444;
-  border-radius: 20px;
-  box-shadow:  5px 5px 10px #333,  -5px -5px 10px #555;
-  padding: 20px;
-} */
+
 .neumorphism {
   width: 300px;
   background: #11212d;
@@ -106,10 +94,9 @@ body {
   -moz-box-shadow: inset 2px 2px 9px #000, inset -2px -2px 2px #253745;
   -ms-box-shadow: inset 2px 2px 9px #000, inset -2px -2px 2px #253745;
   -o-box-shadox: inset 2px 2px 9px #000, inset -2px -2px 2px #253745;
-  /* border: 0.02px solid #fff; */
+  border: 0.02px solid #fff;
 }
 .button {
-  width: 100px;
   padding-y: 20px;
   background: #11212d;
   border-radius: 10px;
@@ -132,6 +119,19 @@ body {
 .image {
   width: 350px;
   height: 200px;
+}
+
+.product-image {
+  width: 320px;
+  height: 320px;
+}
+.heart {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  color: #fff;
+  font-size: 1.5em;
+  -webkit-text-stroke: 2px #fff;
 }
 
 @media (min-width: 414px) {

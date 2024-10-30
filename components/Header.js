@@ -58,8 +58,10 @@ const Header = () => {
 
       <Link href={"/cart"} className="">
         <Button>
-          <FaCartShopping className="inline mr-2 lg:pb-1 lg:text-2xl" />
-          <span className="lg:text-2xl lg:font-bold">Cart</span>
+          <span className="px-4">
+            <FaCartShopping className="inline mr-2 lg:pb-1 lg:text-2xl" />
+            <span className="lg:text-2xl lg:font-bold">Cart</span>
+          </span>
         </Button>
       </Link>
     </header>
