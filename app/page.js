@@ -2,19 +2,30 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import { getAllProducts, searchProductType } from "@/data/product";
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const page = () => {
   const product = getAllProducts();
-  let searchResult;
+  const [searchMessage, setSearchMessage] = useState('');
+  const [searchResult, setSearchResult] = useState([]);
 
   const search = () => {
     const search = document.querySelector(".search").value;
-    // const searchResult = document.querySelector('.searchResult');
 
-    const results = searchProductType(search);
-    console.log(results)
+    if(!search) {
+      setSearchMessage(<p>Enter valid input</p>)
+      setTimeout(() => {
+        setSearchMessage('')
+      }, 3000)
+    } else {
+      const results = searchProductType(search);
+      console.log(results);
+      setSearchResult(results)
+    }
+    
+    
+    
   };
 
   return (
@@ -40,12 +51,40 @@ const page = () => {
           />
         </div>
 
-        <div className="searchResult mt-10 text-start px-8">
-          
+        {searchMessage}
+        <div className="searchResult mt-10 text-start px-8 flex overflow-hidden overflow-x-scroll my-10">
+          <div className="flex w-[2500px] justify-between">
+            {searchResult &&
+              searchResult.map((item) => (
+                <div className="w-[320px] mr-10">
+                  <Card key={item.id}>
+                    <div key={item.id}>
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="rounded-tr-md rounded-tl-md product-image"
+                      />
+                    </div>
+                    <p className="mt-5">{item.description}</p>
+                    <p className="flex justify-between px-5 my-5">
+                      <span>Price: {item.price}</span>{" "}
+                      <span>Rating: {item.rating}</span>
+                    </p>
+                    <div className="py-2 ">
+                      <Button>
+                        <span className="px-7">Add To Cart</span>
+                      </Button>
+                    </div>
+                  </Card>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
 
       <div className="products flex flex-col">
+        <h1 className="font-bold text-3xl ml-7 ">Products</h1>
+
         {product.map((pro) => (
           <div key={pro.id} className="mt-10 w-[320px] ml-7">
             <Card key={pro.id}>

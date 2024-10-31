@@ -6,7 +6,7 @@ const product = [
     description:
       "Iphone X, available in carton, brand new, earpod inclusive with purchase, 2years gurantee, fast charger inclusive, USB cord inclusive",
     price: "N500k",
-    productType: "phone IPhone",
+    productType: "phone iphone iphonex",
     rating: "4.5",
   },
   {
