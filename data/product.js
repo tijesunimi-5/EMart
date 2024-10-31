@@ -106,7 +106,15 @@ export function getAllProducts() {
 }
 
 export function searchProductType(searchTerm) {
-  return product.filter((item) => {
-    return item.productType.split(" ").some((type) => type.toLowerCase().includes(searchTerm.toLowerCase())) //this check if the words match......
-  })
+  const filteredProduct = product.filter((item) => {
+    return item.productType
+      .split(" ")
+      .some((type) => type.toLowerCase().includes(searchTerm.toLowerCase())); //this check if the words match......
+  });
+
+  if (filteredProduct.length === 0) {
+    throw new Error("Product not available");
+  } else {
+    return filteredProduct;
+  }
 }

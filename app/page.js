@@ -11,17 +11,26 @@ const page = () => {
   const [searchResult, setSearchResult] = useState([]);
 
   const search = () => {
-    const search = document.querySelector(".search").value;
+    const searchInput = document.querySelector(".search").value;
 
-    if(!search) {
+    if(!searchInput) {
       setSearchMessage(<p>Enter valid input</p>)
       setTimeout(() => {
         setSearchMessage('')
       }, 3000)
+     
     } else {
-      const results = searchProductType(search);
-      console.log(results);
-      setSearchResult(results)
+      try {
+        const results = searchProductType(searchInput);
+        setSearchResult(results);
+        setSearchMessage('')
+      } catch (error) {
+        setSearchMessage(<p>{error.message}</p>)
+        setTimeout(() => {
+          setSearchMessage(' ')
+        }, 3000)
+        setSearchResult([])
+      }
     }
     
     
