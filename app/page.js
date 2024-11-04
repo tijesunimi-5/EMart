@@ -53,7 +53,7 @@ const page = () => {
           <input
             id="search"
             type="text"
-            className="search relative input w-[270px] mt-2 pl-16 h-7"
+            className="search relative input w-[270px] mt-2 pl-16 h-7 xl:border-0"
           />
 
           <FaArrowRight
@@ -93,7 +93,6 @@ const page = () => {
         </div>
       </div>
 
-      
       <div className="products flex flex-col">
         <h1 className="font-bold text-3xl ml-7 ">Products</h1>
 
@@ -122,7 +121,6 @@ const page = () => {
                   <span className="px-7">Add To Cart</span>
                 </Button>
               </div>
-              
             </Card>
           </div>
         ))}

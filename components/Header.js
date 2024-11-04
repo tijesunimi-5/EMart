@@ -45,10 +45,10 @@ const Header = () => {
       </Link>
 
       <div className="text-white hidden lg:flex justify-between w-[300px] mt-2 text-2xl">
-        <Link href={"/product"} className=" hover:underline transition-all">
+        <Link href={"/"} className=" hover:underline transition-all">
           Product
         </Link>
-        <Link href={"/#about-us"} className=" hover:underline transition-all">
+        <Link href={"/about-us"} className=" hover:underline transition-all">
           About
         </Link>
         <Link href={"/settings"} className=" hover:underline transition-all">
