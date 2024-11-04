@@ -1,41 +1,43 @@
 "use client";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
+import { useCart } from "@/components/cartContext";
 import { getAllProducts, searchProductType } from "@/data/product";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+// import { easeInOut, motion } from "framer-motion";
 
 const page = () => {
   const product = getAllProducts();
-  const [searchMessage, setSearchMessage] = useState('');
+  const [searchMessage, setSearchMessage] = useState("");
   const [searchResult, setSearchResult] = useState([]);
+  const { addToCart } = useCart();
+  // const [cartNotify, setCartNotification] = useState();
 
   const search = () => {
     const searchInput = document.querySelector(".search").value;
 
-    if(!searchInput) {
-      setSearchMessage(<p>Enter valid input</p>)
+    if (!searchInput) {
+      setSearchMessage(<p>Enter valid input</p>);
       setTimeout(() => {
-        setSearchMessage('')
-      }, 3000)
-     
+        setSearchMessage("");
+      }, 3000);
     } else {
       try {
         const results = searchProductType(searchInput);
         setSearchResult(results);
-        setSearchMessage('')
+        setSearchMessage("");
       } catch (error) {
-        setSearchMessage(<p>{error.message}</p>)
+        setSearchMessage(<p>{error.message}</p>);
         setTimeout(() => {
-          setSearchMessage(' ')
-        }, 3000)
-        setSearchResult([])
+          setSearchMessage(" ");
+        }, 3000);
+        setSearchResult([]);
       }
     }
-    
-    
-    
   };
+
+  
 
   return (
     <div className="bg-main-bg mt-5 pb-20 text-white">
@@ -80,7 +82,7 @@ const page = () => {
                       <span>Rating: {item.rating}</span>
                     </p>
                     <div className="py-2 ">
-                      <Button>
+                      <Button onClick={() => addToCart(item)} key={item.id}>
                         <span className="px-7">Add To Cart</span>
                       </Button>
                     </div>
@@ -91,6 +93,7 @@ const page = () => {
         </div>
       </div>
 
+      
       <div className="products flex flex-col">
         <h1 className="font-bold text-3xl ml-7 ">Products</h1>
 
@@ -110,10 +113,16 @@ const page = () => {
                 <span>Rating: {pro.rating}</span>
               </p>
               <div className="py-2 ">
-                <Button>
+                <Button
+                  onClick={() => {
+                    addToCart(pro);
+                  }}
+                  key={pro.id}
+                >
                   <span className="px-7">Add To Cart</span>
                 </Button>
               </div>
+              
             </Card>
           </div>
         ))}

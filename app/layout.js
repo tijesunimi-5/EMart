@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Dashboard from "@/components/Dashboard";
+import { CartProvider } from "@/components/cartContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,8 +28,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} relative antialiased`}
       >
         <Header />
+
         <Dashboard />
-        {children}
+        <CartProvider>{children}</CartProvider>
         <Footer />
       </body>
     </html>

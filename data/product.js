@@ -5,9 +5,10 @@ const product = [
     title: "Iphone X",
     description:
       "Iphone X, available in carton, brand new, earpod inclusive with purchase, 2years gurantee, fast charger inclusive, USB cord inclusive",
-    price: "N500k",
+    price: "500k",
     productType: "phone iphone iphonex",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "2",
@@ -15,9 +16,10 @@ const product = [
     title: "Phone",
     description:
       "Phone, available in carton, brand new, 2years gurantee, fast charger inclusive, USB cord inclusive",
-    price: "N300k",
+    price: "300k",
     productType: "phone, Phone",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "3",
@@ -25,49 +27,54 @@ const product = [
     title: "Phone",
     description:
       "Phone, available in carton, brand new, 2years gurantee, fast charger inclusive, USB cord inclusive",
-    price: "N250k",
+    price: "250k",
     productType: "phone Phone",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "4",
     image: "/ps5.jpg",
-    title: "Play station game console",
+    title: "Play station ",
     description:
       "Neat PS5, brand new, Game pad available, game disc available(2 discs)...",
-    price: "N1.0M",
+    price: "1.0M",
     productType: "ps5 game gameconsole",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "5",
     image: "/gamepad.jpg",
-    title: "Play station game console",
+    title: "Play station ",
     description:
       "Neat game pad for ps of any type, brand new, wireless, connection smooth, duration - last long...",
-    price: "N1.0M",
+    price: "1.0M",
     productType: "ps5 game gameconsole",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "6",
     image: "/gamepadii.jpg",
-    title: "Play station game console",
+    title: "Play station ",
     description:
       "Neat game pad for ps of any type, brand new, wireless, connection smooth, duration - last long...",
-    price: "N900k",
-    productType: "ps5 game gameconsole",
-    rating: "4.5",
+    price: "900k",
+    productType: "ps5 game console",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "7",
     image: "/gamepadiii.jpg",
-    title: "Play station game console",
+    title: "Play station ",
     description:
       "Neat game pad for ps of any type, brand new, wireless, connection smooth, duration - last long...",
-    price: "N850kM",
+    price: "850kM",
     productType: "ps5 game gameconsole",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "8",
@@ -75,9 +82,10 @@ const product = [
     title: "headPhone",
     description:
       "Neat head phone, quality sound, good bass, duration - last long...",
-    price: "N10k",
+    price: "10k",
     productType: "headset earpiece headphone",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "9",
@@ -85,9 +93,10 @@ const product = [
     title: "Laptop",
     description:
       "Neat Acer, 8gb 500gb, webcam available, duration - last long...",
-    price: "N1.2M",
+    price: "1.2M",
     productType: "pc laptop acer",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
   {
     id: "10",
@@ -95,9 +104,10 @@ const product = [
     title: "headPhone",
     description:
       "Neat headphone, wireless, connection smooth, duration - last long...",
-    price: "N10k",
+    price: "10k",
     productType: "headset earpiece earphone headphone",
-    rating: "4.5",
+    rating: 4.5,
+    quantity: 1,
   },
 ];
 
