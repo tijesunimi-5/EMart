@@ -1,11 +1,23 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaTools, FaUser } from "react-icons/fa";
 import { FaShop, FaInfo } from "react-icons/fa6";
 import Button from "./Button";
+import { UserContext } from "./userContext";
 
 const Dashboard = () => {
+  const { user } = useContext(UserContext);
+  const [userLog, setUserLog] = useState("");
+
+  useEffect(() => {
+    if (!user) {
+      setUserLog("Login");
+    } else {
+      setUserLog("Logout");
+    }
+  }, [user]);
+
   const closeDashboard = () => {
     const bar = document.querySelector(".menu");
     const close = document.querySelector(".close");
@@ -14,6 +26,12 @@ const Dashboard = () => {
     bar.style.display = "inline";
     close.style.display = "none";
     dash.style.display = "none";
+  };
+
+  const logOut = () => {
+    localStorage.clear();
+    window.location.reload();
+    window.location.href = "/register";
   };
 
   return (
@@ -49,8 +67,8 @@ const Dashboard = () => {
 
         <div className="text-center absolute bottom-0 left-36 mb-4">
           <Button onClick={closeDashboard}>
-            <Link href={"/register"}>
-              <span className="px-4">Logout</span>
+            <Link href={"/register"} onClick={logOut}>
+              <span className="px-4">{userLog}</span>
             </Link>
           </Button>
         </div>

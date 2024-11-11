@@ -1,7 +1,7 @@
 "use client";
 
-import Button from "@/components/Button";
-import Card from "@/components/Card";
+import Button from "../../components/Button";
+import Card from "../../components/Card";
 import Link from "next/link";
 
 export default function Home() {
@@ -14,11 +14,11 @@ export default function Home() {
           <img
             src="phone.jpg"
             alt="phone"
-            className="hero-images md:w-[768px] md:h-[320px] lg:w-[1008px] lg:h-[450px] 2xl:w-[1536px] 2xl:h-[500px]"
+            className="hero-images md:w-[768px] md:h-[320px] lg:w-[1008px] lg:h-[450px] 2xl:w-[1536px] 2xl:h-[700px]"
           />
-          <div className="overlay md:w-[768px] md:h-[320px] lg:w-[1008px] lg:h-[450px] 2xl:w-[1516px] 2xl:h-[500px]"></div>
+          <div className="overlay md:w-[768px] md:h-[320px] lg:w-[1008px] lg:h-[450px] 2xl:w-[1516px] 2xl:h-[700px]"></div>
           <div className="absolute top-20 left-9">
-            <p className="hero-text w-[300px] text-center font-bold md:w-[450px] md:ml-[100px] md:text-2xl lg:text-4xl lg:w-[650px] lg:ml-[120px] 2xl:w-[850px] 2xl:ml-[250px] 2xl:mt-20">
+            <p className="hero-text w-[300px] text-center font-bold md:w-[450px] md:ml-[100px] md:text-2xl lg:text-4xl lg:w-[650px] lg:ml-[120px] 2xl:w-[850px] 2xl:ml-[250px] 2xl:mt-40">
               Welcome to your premier destination for the latest and greatest
               gadgets.
             </p>
@@ -154,7 +154,7 @@ export default function Home() {
                   <input
                     type="email"
                     id="email"
-                    className="input w-[200px] pl-2 md:w-[470px]"
+                    className="input w-[200px] pl-2 md:w-[470px] lg:border-0"
                   />
                 </div>
 
@@ -165,7 +165,7 @@ export default function Home() {
                   <textarea
                     type="text"
                     id="message"
-                    className="input w-[260px] h-16 pl-2 md:w-[470px] lg:w-[550px]"
+                    className="input w-[260px] h-16 pl-2 md:w-[470px] lg:w-[550px] lg:border-0"
                   ></textarea>
                 </div>
                 <div className="form-btn ml-20 mt-5 md:ml-48 lg:ml-[250px]">

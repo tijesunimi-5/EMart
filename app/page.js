@@ -1,8 +1,8 @@
 "use client";
-import Button from "@/components/Button";
-import Card from "@/components/Card";
-import { useCart } from "@/components/cartContext";
-import { getAllProducts, searchProductType } from "@/data/product";
+import Button from "../components/Button";
+import Card from "../components/Card";
+import { useCart } from "../components/cartContext";
+import { getAllProducts, searchProductType } from "../data/product";
 import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 // import { easeInOut, motion } from "framer-motion";
@@ -43,37 +43,37 @@ const page = () => {
     <div className="bg-main-bg mt-5 pb-20 text-white">
       <div className="pt-20 text-center">
         <h1 className="font-bold text-xl">Search for a product</h1>
-        <div className="relative w-[270px] ml-14">
+        <div className="relative w-[270px] ml-14 md:w-[630px] lg:w-[900px]">
           <label
             htmlFor="search"
-            className="absolute z-10 mt-2 pl-1 border-r-2 pr-1"
+            className="absolute z-10 mt-2 pl-1 border-r-2 pr-1 md:py-2 md:text-xl"
           >
             Search
           </label>
           <input
             id="search"
             type="text"
-            className="search relative input w-[270px] mt-2 pl-16 h-7 xl:border-0"
+            className="search relative input w-[270px] mt-2 pl-16 h-7 xl:border-0 md:w-[650px] md:h-12 md:pl-20 md:text-xl lg:w-[900px]"
           />
 
           <FaArrowRight
             onClick={search}
-            className="absolute right-1 top-3 text-xl border-l-2 pl-1"
+            className="searchIn absolute right-1 top-3 text-xl border-l-2 pl-1 md:right-[-7px] md:text-2xl md:bottom-0 md:my-2 lg:right-3"
           />
         </div>
 
         {searchMessage}
-        <div className="searchResult mt-10 text-start px-8 flex overflow-hidden overflow-x-scroll my-10">
+        <div className="searchResult mt-10 text-start px-8 flex overflow-hidden overflow-x-scroll my-10  rounded-md ml-2 md:w-[740px] lg:w-[980px]">
           <div className="flex w-[2500px] justify-between">
             {searchResult &&
               searchResult.map((item) => (
-                <div className="w-[320px] mr-10">
+                <div className="w-[350px] mr-10 ml-[-20px]">
                   <Card key={item.id}>
                     <div key={item.id}>
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="rounded-tr-md rounded-tl-md product-image"
+                        className="rounded-tr-md rounded-tl-md w-[350px] h-[300px]"
                       />
                     </div>
                     <p className="mt-5">{item.description}</p>
@@ -94,36 +94,41 @@ const page = () => {
       </div>
 
       <div className="products flex flex-col">
-        <h1 className="font-bold text-3xl ml-7 ">Products</h1>
+        <h1 className="font-bold text-3xl ml-7 lg:text-5xl">Products</h1>
 
-        {product.map((pro) => (
-          <div key={pro.id} className="mt-10 w-[320px] ml-7">
-            <Card key={pro.id}>
-              <div className="relative" key={pro.id}>
-                <img
-                  src={pro.image}
-                  alt={pro.title}
-                  className="rounded-tr-md rounded-tl-md product-image"
-                />
-              </div>
-              <p className="mt-5">{pro.description}</p>
-              <p className="flex justify-between px-5 my-5">
-                <span>Price: {pro.price}</span>{" "}
-                <span>Rating: {pro.rating}</span>
-              </p>
-              <div className="py-2 ">
-                <Button
-                  onClick={() => {
-                    addToCart(pro);
-                  }}
-                  key={pro.id}
-                >
-                  <span className="px-7">Add To Cart</span>
-                </Button>
-              </div>
-            </Card>
-          </div>
-        ))}
+        <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:overflow-x-hidden ">
+          {product.map((pro) => (
+            <div
+              key={pro.id}
+              className="prod mt-10 w-[350px] ml-3 md:w-[600px] md:ml-20 lg:w-[400px] lg:ml-12 lg:flex "
+            >
+              <Card key={pro.id}>
+                <div className="relative" key={pro.id}>
+                  <img
+                    src={pro.image}
+                    alt={pro.title}
+                    className="rounded-tr-md rounded-tl-md w-[350px] pro-image md:w-[600px] md:h-[450px] lg:w-[400px] lg:h-[350px]"
+                  />
+                </div>
+                <p className="mt-5">{pro.description}</p>
+                <p className="flex justify-between px-5 my-5">
+                  <span>Price: {pro.price}</span>{" "}
+                  <span>Rating: {pro.rating}</span>
+                </p>
+                <div className="py-2 ">
+                  <Button
+                    onClick={() => {
+                      addToCart(pro);
+                    }}
+                    key={pro.id}
+                  >
+                    <span className="px-7">Add To Cart</span>
+                  </Button>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

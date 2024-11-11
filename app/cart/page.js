@@ -1,12 +1,13 @@
 "use client";
-import Button from "@/components/Button";
-import Card from "@/components/Card";
-import { useCart } from "@/components/cartContext";
+import Button from "../../components/Button";
+import Card from "../../components/Card";
+import { CartProvider, useCart } from "../../components/cartContext";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 
 const page = () => {
   const { cart, setCart } = useCart();
+
 
   //this converts the price of each products into numbers 
   const convertPriceToInt = (price) => {
@@ -56,17 +57,17 @@ const page = () => {
       <h1 className="text-4xl text-center underline font-bold l">Cart</h1>
       {cart.length > 0 ? (
         cart.map((item, index) => (
-          <div key={index} className="mt-3">
-            <div className="w-[300px] overflow-hidden ml-10">
+          <div key={index} className="mt-3 lg:ml-16">
+            <div className="w-[300px] overflow-hidden ml-10 cart-item md:w-[650px] md:ml-16 lg:ml-24">
               <Card>
-                <div className="w-[300px] h-[380px] overflow-hidden">
+                <div className="cart w-[300px] h-[380px] overflow-hidden md:w-[650px]">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-[300px] h-[250px] rounded-tr-md rounded-tl-md"
+                    className="cart-image w-[300px] h-[250px] rounded-tr-md rounded-tl-md md:w-[650px]"
                   />
 
-                  <div className="mt-3 flex justify-between mx-2">
+                  <div className="cart-detail mt-3 flex justify-between mx-2">
                     <span>product: {item.title}</span>
                     <span>price: {item.price}</span>
                   </div>

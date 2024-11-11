@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import Button from "../../components/Button";
 import Link from "next/link";
 import React from "react";
 
@@ -7,7 +7,7 @@ const page = () => {
     <div className="bg-main-bg h-[70vh] text-white">
       <div>
         <div className="pt-20 text-2xl pl-3 border-b">
-          <Link href={"/settings/profile-edit"}>Edit your profile</Link>
+          <Link href={"/settings/edit-profile"}>Edit your profile</Link>
         </div>
         <div className="mt-5 text-2xl pl-3 border-b">
           <Link href={"/settings/change-password"}>Change password</Link>
