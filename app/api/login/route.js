@@ -1,5 +1,4 @@
 import { MongoClient } from "mongodb";
-import {setUser} from '../../../components/userContext'
 
 // MongoDB connection URI
 const uri = process.env.MONGODB_URI;
