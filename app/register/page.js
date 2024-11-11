@@ -21,7 +21,6 @@ const register = () => {
   const handleSignIn = async (e) => {
     e.preventDefault();
 
-
     try {
       const res = await fetch('/api/login', {
         method: 'POST',
@@ -35,7 +34,7 @@ const register = () => {
         localStorage.setItem('token', data.token);
         setUser(data.user);
         console.log(data.user)
-        setError("login successful")
+        setError(<p className="text-xl font-bold text-center text-green-600">login successful</p>);
         setTimeout(() => {
           setError('')
         }, 3000);
@@ -46,7 +45,7 @@ const register = () => {
         }, 3000)
       }
     } catch (error) {
-      setError("An error occured")
+      setError(<p className="text-red-600 text-center font-bold text-xl">An error occured</p>);
       setTimeout(() => {
         setError('')
       }, 3000)
