@@ -4,7 +4,6 @@ import Card from "../../components/Card";
 import Link from "next/link";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../components/userContext";
-import { getAllUser } from "../../data/user";
 
 const Register = () => {
   const { setUser } = useContext(UserContext);
@@ -18,7 +17,6 @@ const Register = () => {
   const [isSignUp, setIsSignUp] = useState(false);
 
   const handleSignIn = async (e) => {
-    e.preventDefault();
     try {
       const res = await fetch("/api/login", {
         method: "POST",
@@ -44,7 +42,6 @@ const Register = () => {
   };
 
   const handleSignUp = async (e) => {
-    e.preventDefault();
     if (!regEmail || !regName || !regPhone || !regPassword) {
       setError("All fields are required");
       setTimeout(() => setError(""), 3000);
@@ -218,7 +215,7 @@ const Register = () => {
                 </span>
               )}
             </div>
-            {error && <p className="mt-3 text-center text-red-600">{error}</p>}
+            {error && <p className="mt-3 text-center text-blue-600">{error}</p>}
           </form>
         </Card>
       </div>
