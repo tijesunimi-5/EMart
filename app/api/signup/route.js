@@ -5,7 +5,7 @@ export async function POST(req) {
     const { username, email, phone, password, bio } = await req.json();
 
     const client = await clientPromise;
-    const db = client.db("user-data");
+    const db = client.db("userData");
     const existingUser = await db.collection("users").findOne({ email });
     if (existingUser) {
       return new Response(

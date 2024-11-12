@@ -17,6 +17,7 @@ const Register = () => {
   const [isSignUp, setIsSignUp] = useState(false);
 
   const handleSignIn = async (e) => {
+    e.preventDefault();
     try {
       const res = await fetch("/api/login", {
         method: "POST",
@@ -29,6 +30,7 @@ const Register = () => {
       if (res.ok) {
         localStorage.setItem("token", data.token);
         setUser(data.user);
+        console.log(data.user)
         setError("Login successful");
         setTimeout(() => setError(""), 3000);
       } else {
@@ -42,6 +44,7 @@ const Register = () => {
   };
 
   const handleSignUp = async (e) => {
+    e.preventDefault();
     if (!regEmail || !regName || !regPhone || !regPassword) {
       setError("All fields are required");
       setTimeout(() => setError(""), 3000);

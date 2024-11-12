@@ -1,36 +1,34 @@
 "use client";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
-import React, { useContext, useEffect, useRef, useState } from "react";
-import { FaMinus, FaPen, FaPenAlt } from "react-icons/fa";
+import React, { useContext, useEffect, useState } from "react";
+import { FaMinus, FaPen } from "react-icons/fa";
 import { UserContext } from "../../components/userContext";
 import Link from "next/link";
 
-const page = () => {
+const ProfilePage = () => {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
-  const [uploadMessage, setUploadMessage] = useState();
-  // const [userImage, setUserImage] = useState()
+  const [uploadMessage, setUploadMessage] = useState("");
   const [defaultPicture, setDefaultPicture] = useState("/uploads/picture.jpg");
-  const [availableUser, setAvailableUser ] = useState(<p className="text-2xl font-bold ml-9 mb-2 lowercase">@Guest</p>);
+  const [availableUser, setAvailableUser] = useState(
+    <p className="text-2xl font-bold ml-9 mb-2 lowercase">@Guest</p>
+  );
   const [userBio, setUserBio] = useState(
     <p className="bio">A guest user exploring the website</p>
   );
-  const [updateMessage, setUpdateMessage] = useState('')
 
-  //To use userContext---->
-  const { user } = useContext(UserContext);
+  const { user, updateUser } = useContext(UserContext);
 
   useEffect(() => {
-     if (user) {
-       setAvailableUser(
-         <h1 className="userName ml-8 text-2xl font-bold">{user.username}</h1>
-         
-       );
-       setDefaultPicture(`${user.image}`)
-       setUserBio(<p className="bio">{user.bio}</p>);
-     } 
-  }, [user])
+    if (user) {
+      setAvailableUser(
+        <h1 className="userName ml-8 text-2xl font-bold">{user.username}</h1>
+      );
+      setDefaultPicture(`${user.image || "/uploads/picture.jpg"}`);
+      setUserBio(<p className="bio">{user.bio}</p>);
+    }
+  }, [user]);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -39,112 +37,52 @@ const page = () => {
   };
 
   const handleUpload = async () => {
-    const uploadImage = document.querySelector(".uploadImage");
     if (!image) {
       setUploadMessage(
         <p className="text-xl text-red-500">Select an image to upload</p>
       );
-
-      setTimeout(() => {
-        setUploadMessage("");
-      }, 3000);
+      setTimeout(() => setUploadMessage(""), 3000);
       return;
     }
 
     const formData = new FormData();
     formData.append("file", image);
 
-    const response = await fetch("api/upload", {
+
+    const response = await fetch("/api/upload", {
       method: "POST",
+      headers: {
+        'user-id': user._id
+      },
       body: formData,
     });
 
     if (response.ok) {
-      console.log("Image uploaded successfully!");
+      const data = await response.json();
+      updateUser({ image: data.imageUrl }); // Update image in the context
+      setUploadMessage(
+        <p className="text-xl text-green-500">Image uploaded successfully!</p>
+      );
     } else {
-      console.log("Failed to upload image.");
+      setUploadMessage(
+        <p className="text-xl text-red-500">Failed to upload image.</p>
+      );
     }
-
-    uploadImage.style.display = "none";
   };
 
   const profileBtn = () => {
     const uploadImage = document.querySelector(".uploadImage");
-
     uploadImage.style.display = "block";
-    console.log("working");
   };
 
   const closeUpload = () => {
     const uploadImage = document.querySelector(".uploadImage");
-
     uploadImage.style.display = "none";
   };
 
-  const productRef = useRef(null);
-  const historyRef = useRef(null);
-  const PendingRef = useRef(null);
-  const deliveryRef = useRef(null);
-
-  useEffect(() => {
-    if (productRef.current) {
-      productRef.current.addEventListener("click", () => {
-        productRef.current.classList.add("active");
-        historyRef.current.classList.remove("active");
-        PendingRef.current.classList.remove("active");
-        deliveryRef.current.classList.remove("active");
-
-        
-
-        setUpdateMessage("Product not available Sign Up");
-      });
-    }
-  }, [productRef]);
-
-  useEffect(() => {
-    if (historyRef.current) {
-      historyRef.current.addEventListener("click", () => {
-        productRef.current.classList.remove("active");
-        historyRef.current.classList.add("active");
-        PendingRef.current.classList.remove("active");
-        deliveryRef.current.classList.remove("active");
-
-        setUpdateMessage("History not available Sign Up");
-      });
-    }
-  }, [historyRef]);
-
-  useEffect(() => {
-    if (PendingRef.current) {
-      PendingRef.current.addEventListener("click", () => {
-        productRef.current.classList.remove("active");
-        historyRef.current.classList.remove("active");
-        PendingRef.current.classList.add("active");
-        deliveryRef.current.classList.remove("active");
-
-        setUpdateMessage("Transactions not available Sign Up");
-      });
-    }
-  }, [PendingRef]);
-
-  useEffect(() => {
-    if (deliveryRef.current) {
-      deliveryRef.current.addEventListener("click", () => {
-        productRef.current.classList.remove("active");
-        historyRef.current.classList.remove("active");
-        PendingRef.current.classList.remove("active");
-        deliveryRef.current.classList.add("active");
-
-        
-
-        setUpdateMessage("Delivery not available Sign Up");
-      });
-    }
-  }, [deliveryRef]);
-
   const edit = () => {
-    
-  }
+    // Redirect to settings page for editing
+  };
 
   return (
     <div className="bg-main-bg h-[100vh] text-white">
@@ -165,9 +103,8 @@ const page = () => {
       </div>
       <div className="flex ml-36 mt-5">
         <div className="ml-7 mr-3 h-4">
-          {" "}
           <Button onClick={edit}>
-            <Link href={'/settings'} className="py-2" >
+            <Link href={"/settings"} className="py-2">
               <FaPen />
             </Link>
           </Button>
@@ -182,7 +119,7 @@ const page = () => {
         </div>
       </div>
 
-      {/**This prompts the select image from file........ */}
+      {/**This prompts the select image from file */}
       <div className="uploadImage text-center mt-20 w-[350px] ml-3 absolute top-0 hidden">
         <Card>
           <div className="h-[260px] relative text-center align-middle">
@@ -216,23 +153,15 @@ const page = () => {
 
         <div className="mt-5">
           <ul className="flex justify-between">
-            <li ref={productRef} className="proList " id="proList">
-              Products
-            </li>
-            <li ref={historyRef} className="histList">
-              History
-            </li>
-            <li ref={PendingRef} className="pendList">
-              Pending transactions
-            </li>
-            <li ref={deliveryRef} className="deliList">
-              Delivery
-            </li>
+            <li className="proList">Products</li>
+            <li className="histList">History</li>
+            <li className="pendList">Pending transactions</li>
+            <li className="deliList">Delivery</li>
           </ul>
 
           <div>
             <div className="message font-bold mt-20 text-center text-xl">
-              {updateMessage}
+              {uploadMessage}
             </div>
           </div>
         </div>
@@ -241,4 +170,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProfilePage;

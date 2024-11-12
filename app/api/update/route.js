@@ -5,7 +5,7 @@ export async function POST(req) {
     const { email, newBio, newName, newPassword } = await req.json();
 
     const client = await clientPromise;
-    const db = client.db("user-data");
+    const db = client.db("userData");
     const collection = db.collection("users");
 
     //Verify user by email
