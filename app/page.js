@@ -37,13 +37,11 @@ const page = () => {
     }
   };
 
-  
-
   return (
     <div className="bg-main-bg mt-5 pb-20 text-white">
       <div className="pt-20 text-center">
         <h1 className="font-bold text-xl">Search for a product</h1>
-        <div className="relative w-[270px] ml-14 md:w-[630px] lg:w-[900px]">
+        <div className="relative w-[270px] ml-14 md:w-[630px] lg:w-[900px] xl:ml-[280px]">
           <label
             htmlFor="search"
             className="absolute z-10 mt-2 pl-1 border-r-2 pr-1 md:py-2 md:text-xl"
@@ -53,7 +51,7 @@ const page = () => {
           <input
             id="search"
             type="text"
-            className="search relative input w-[270px] mt-2 pl-16 h-7 xl:border-0 md:w-[650px] md:h-12 md:pl-20 md:text-xl lg:w-[900px]"
+            className="search relative input w-[270px] mt-2 pl-16 h-7 xl:border-0 md:w-[650px] md:h-12 md:pl-20 md:text-xl lg:w-[900px] lg:border-0"
           />
 
           <FaArrowRight
@@ -63,7 +61,7 @@ const page = () => {
         </div>
 
         {searchMessage}
-        <div className="searchResult mt-10 text-start px-8 flex overflow-hidden overflow-x-scroll my-10  rounded-md ml-2 md:w-[740px] lg:w-[980px]">
+        <div className="searchResult mt-10 text-start px-8 flex overflow-hidden overflow-x-scroll my-10  rounded-md ml-2 md:w-[740px] lg:w-[980px] xl:w-[1400px] xl:ml-16">
           <div className="flex w-[2500px] justify-between">
             {searchResult &&
               searchResult.map((item) => (
@@ -96,7 +94,7 @@ const page = () => {
       <div className="products flex flex-col">
         <h1 className="font-bold text-3xl ml-7 lg:text-5xl">Products</h1>
 
-        <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:overflow-x-hidden ">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:overflow-x-hidden xl:grid-cols-3 xl:gap-4">
           {product.map((pro) => (
             <div
               key={pro.id}

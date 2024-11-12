@@ -1,27 +1,4 @@
-import { MongoClient } from "mongodb";
-
-// MongoDB connection URI
-const uri = process.env.MONGODB_URI;
-let client;
-
-async function connectToDatabase() {
-  if (!client) {
-    client = new MongoClient(uri);
-    await client.connect();
-  }
-  return client.db("user-data"); // Replace 'data' with your database name if different
-}
-
-// Function to find a user by email
-async function findUserByEmail(email) {
-  const db = await connectToDatabase();
-  const collection = db.collection("users"); // Replace 'users' with your collection name
-
-  // Search for user in MongoDB
-  const user = await collection.findOne({ email });
-  return user;
-  
-}
+import clientPromise from "../../../lib/mongodb";
 
 export async function POST(req) {
   try {
@@ -36,16 +13,11 @@ export async function POST(req) {
       );
     }
 
-    const user = await findUserByEmail(email);
-    if (!user) {
-      return new Response(
-        JSON.stringify({ success: false, message: "User not found" }),
-        { status: 404 }
-      );
-    }
+    const client = await clientPromise;
+    const db = client.db("user-data");
+    const user = await db.collection("users").findOne({ email });
 
-    // Compare password (hashing should be done for real-world applications)
-    if (user.password !== password) {
+    if (!user || user.password !== password) {
       return new Response(
         JSON.stringify({ success: false, message: "Invalid credentials" }),
         { status: 401 }

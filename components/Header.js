@@ -32,7 +32,7 @@ const Header = () => {
     <header className="flex justify-between fixed top-0 right-0 left-0 z-40 px-3 py-2 bg-[#11212D] border-b border-white lg:px-5">
       <div className="flex justify-center align-middle">
         {" "}
-        <div>
+        <div className="lg:hidden">
           <FaBars
             className="menu inline mr-2 lg:hidden text-white text-2xl font-bold lg:text-4xl mt-[7px]"
             onClick={openDashboard}
@@ -49,9 +49,12 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="text-white hidden lg:flex justify-between w-[300px] mt-2 text-2xl">
+      <div className="text-white hidden lg:flex justify-between w-[400px] mt-2 text-2xl">
         <Link href={"/"} className=" hover:underline transition-all">
           Product
+        </Link>
+        <Link href={"/profile"} className=" hover:underline transition-all">
+          Profile
         </Link>
         <Link href={"/about-us"} className=" hover:underline transition-all">
           About

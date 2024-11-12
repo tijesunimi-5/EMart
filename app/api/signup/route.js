@@ -1,24 +1,30 @@
-import clientPromise from '../../../lib/mongodb'
+import clientPromise from "../../../lib/mongodb";
 
 export async function POST(req) {
   try {
-    const {username, email, phone, password} = await req.json();
-    console.log("Received data:", {username, email, phone, password})
+    const { username, email, phone, password, bio } = await req.json();
 
     const client = await clientPromise;
-    const db = client.db('user-data');
-    const collection = db.collection('users')
+    const db = client.db("user-data");
+    const existingUser = await db.collection("users").findOne({ email });
+    if (existingUser) {
+      return new Response(
+        JSON.stringify({ success: false, message: "User already exists" }),
+        { status: 409 }
+      );
+    }
 
-    const result = await collection.insertOne({username, email, phone, password});
-
-    return new Response(JSON.stringify({ success: true, result}), {
+    const result = await db
+      .collection("users")
+      .insertOne({ username, email, phone, password, bio });
+    return new Response(JSON.stringify({ success: true, result }), {
       status: 200,
-    })
+    });
   } catch (error) {
-    console.error(error);
+    console.error("Signup error:", error);
     return new Response(
-      JSON.stringify({success: false, error: error.message}),
-      {status: 500}
-    )
+      JSON.stringify({ success: false, error: error.message }),
+      { status: 500 }
+    );
   }
 }

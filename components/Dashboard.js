@@ -67,7 +67,7 @@ const Dashboard = () => {
 
         <div className="text-center absolute bottom-0 left-36 mb-4">
           <Button onClick={closeDashboard}>
-            <Link href={"/register"} onClick={logOut}>
+            <Link href={"/register/#login"} onClick={logOut}>
               <span className="px-4">{userLog}</span>
             </Link>
           </Button>
