@@ -9,7 +9,6 @@ const Page = () => {
   const [showBioTextarea, setShowBioTextarea] = useState(false);
   const [showDeliveryTextarea, setShowDeliveryTextarea] = useState(false);
   const { user, updateUser } = useContext(UserContext);
-  
 
   // State variables to store the new values for each field
   const [newBio, setNewBio] = useState(user?.bio || "");
@@ -50,7 +49,12 @@ const Page = () => {
       const data = await response.json();
       if (response.ok) {
         setMessage("Profile updated successfully!");
-        updateUser({ ...user, bio: newBio, username: newName, address: userAddress})
+        updateUser({
+          ...user,
+          bio: newBio,
+          username: newName,
+          address: userAddress,
+        });
       } else {
         setMessage(data.message || "Failed to update profile");
       }

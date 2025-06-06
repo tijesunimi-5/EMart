@@ -1,8 +1,10 @@
+import useTracker from "../../lib/useTracker";
 import Button from "../../components/Button";
 import Link from "next/link";
 import React from "react";
 
 const page = () => {
+
   return (
     <div className="bg-main-bg h-[70vh] text-white">
       <div>

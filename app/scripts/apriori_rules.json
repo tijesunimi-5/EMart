@@ -1,0 +1,98 @@
+[
+  {
+    "antecedents": [
+      "12",
+      "1"
+    ],
+    "consequents": [
+      "14"
+    ],
+    "support": 0.01,
+    "confidence": 0.5,
+    "lift": 4.3478260869565215
+  },
+  {
+    "antecedents": [
+      "14",
+      "1"
+    ],
+    "consequents": [
+      "12"
+    ],
+    "support": 0.01,
+    "confidence": 0.6666666666666667,
+    "lift": 6.34920634920635
+  },
+  {
+    "antecedents": [
+      "12",
+      "14"
+    ],
+    "consequents": [
+      "1"
+    ],
+    "support": 0.01,
+    "confidence": 1.0,
+    "lift": 9.523809523809524
+  },
+  {
+    "antecedents": [
+      "6",
+      "7"
+    ],
+    "consequents": [
+      "15"
+    ],
+    "support": 0.01,
+    "confidence": 0.6666666666666667,
+    "lift": 5.555555555555556
+  },
+  {
+    "antecedents": [
+      "15",
+      "9"
+    ],
+    "consequents": [
+      "7"
+    ],
+    "support": 0.01,
+    "confidence": 1.0,
+    "lift": 4.651162790697675
+  },
+  {
+    "antecedents": [
+      "7",
+      "9"
+    ],
+    "consequents": [
+      "15"
+    ],
+    "support": 0.01,
+    "confidence": 0.6666666666666667,
+    "lift": 5.555555555555556
+  },
+  {
+    "antecedents": [
+      "4",
+      "8"
+    ],
+    "consequents": [
+      "6"
+    ],
+    "support": 0.01,
+    "confidence": 1.0,
+    "lift": 7.142857142857142
+  },
+  {
+    "antecedents": [
+      "8",
+      "6"
+    ],
+    "consequents": [
+      "4"
+    ],
+    "support": 0.01,
+    "confidence": 0.5,
+    "lift": 3.7037037037037033
+  }
+]

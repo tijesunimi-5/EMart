@@ -35,7 +35,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dash fixed top-0 text-white bg-main-bg w-full h-[70vh] z-20 hidden">
+    <div className="dash fixed top-0 text-white bg-main-bg w-full h-[100vh] z-20 hidden">
       <div className="pt-16">
         <div className="border-b border-white">
           <Link href={"/profile"} className="flex" onClick={closeDashboard}>

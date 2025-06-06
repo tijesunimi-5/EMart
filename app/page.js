@@ -4,17 +4,20 @@ import Card from "../components/Card";
 import { useCart } from "../components/cartContext";
 import { getAllProducts, searchProductType } from "../data/product";
 import React, { useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
-// import { easeInOut, motion } from "framer-motion";
+import CookieConsent from "react-cookie-consent";
+import useTracker from "../lib/useTracker";
+import Footer from "../components/Footer";
+import SearchInput from "../components/SearchInput";
 
 const page = () => {
   const product = getAllProducts();
   const [searchMessage, setSearchMessage] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const { addToCart } = useCart();
-  // const [cartNotify, setCartNotification] = useState();
+  const { addCart } = useTracker("home page");
 
   const search = () => {
+    console.log("Search function called");
     const searchInput = document.querySelector(".search").value;
 
     if (!searchInput) {
@@ -37,27 +40,24 @@ const page = () => {
     }
   };
 
+  const handleAddToCart = async (product) => {
+    addToCart(product);
+    addCart({
+      name: product.title,
+      productId: product.id,
+      price: product.price,
+    });
+
+    console.log(`Product "${product.title}" added to cart and event tracked.`);
+  };
+
   return (
     <div className="bg-main-bg mt-5 pb-20 text-white">
-      <div className="pt-20 text-center">
-        <h1 className="font-bold text-xl">Search for a product</h1>
-        <div className="relative w-[270px] ml-14 md:w-[630px] lg:w-[900px] xl:ml-[280px]">
-          <label
-            htmlFor="search"
-            className="absolute z-10 mt-2 pl-1 border-r-2 pr-1 md:py-2 md:text-xl"
-          >
-            Search
-          </label>
-          <input
-            id="search"
-            type="text"
-            className="search relative input w-[270px] mt-2 pl-16 h-7 xl:border-0 md:w-[650px] md:h-12 md:pl-20 md:text-xl lg:w-[900px] lg:border-0"
-          />
-
-          <FaArrowRight
-            onClick={search}
-            className="searchIn absolute right-1 top-3 text-xl border-l-2 pl-1 md:right-[-7px] md:text-2xl md:bottom-0 md:my-2 lg:right-3"
-          />
+      <div className="pt-12 text-center">
+        {/* <h1 className="font-bold text-xl">Search for a product</h1> */}
+        <div className="relative w-screen md:w-[630px] lg:w-[900px] xl:ml-[280px] flex justify-center items-center">
+          {/* <input type="text" className="w-[300px] mx-8 mt-5" onClick={search} /> */}
+          <SearchInput onclick={search} /> 
         </div>
 
         {searchMessage}
@@ -80,8 +80,11 @@ const page = () => {
                       <span>Rating: {item.rating}</span>
                     </p>
                     <div className="py-2 ">
-                      <Button onClick={() => addToCart(item)} key={item.id}>
-                        <span className="px-7">Add To Cart</span>
+                      <Button
+                        onClick={() => handleAddToCart(item)}
+                        key={item.id}
+                      >
+                        Add to cart
                       </Button>
                     </div>
                   </Card>
@@ -113,14 +116,14 @@ const page = () => {
                   <span>Price: {pro.price}</span>{" "}
                   <span>Rating: {pro.rating}</span>
                 </p>
-                <div className="py-2 ">
-                  <Button
+                <div className="my-2">
+                  <Button styles={'w-[120px] py-1 tracking-wider text-[15px]'}
                     onClick={() => {
-                      addToCart(pro);
+                      handleAddToCart(pro);
                     }}
                     key={pro.id}
                   >
-                    <span className="px-7">Add To Cart</span>
+                    Add To Cart
                   </Button>
                 </div>
               </Card>
@@ -128,6 +131,18 @@ const page = () => {
           ))}
         </div>
       </div>
+      <CookieConsent
+        location="bottom"
+        buttonText="Accept"
+        cookieName="userConsent"
+        style={{ background: "#2b373B" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        expires={150}
+      >
+        This website uses cookies to track user behaviot for analytics and
+        recommendations, in compliance with NDPR.
+      </CookieConsent>
+      <Footer />
     </div>
   );
 };

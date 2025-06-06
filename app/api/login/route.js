@@ -14,7 +14,7 @@ export async function POST(req) {
     }
 
     const client = await clientPromise;
-    const db = client.db("userData");
+    const db = client.db("registeredUsers");
     const user = await db.collection("users").findOne({ email });
 
     if (!user || user.password !== password) {

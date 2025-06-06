@@ -1,9 +1,9 @@
 "use client";
 import Button from "../../components/Button";
 import Card from "../../components/Card";
-import Link from "next/link";
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../components/userContext";
+import { useRouter } from "next/navigation";
 
 const Register = () => {
   const { setUser } = useContext(UserContext);
@@ -15,9 +15,18 @@ const Register = () => {
   const [regPhone, setRegPhone] = useState("");
   const [regPassword, setRegPassword] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    if (!userEmail || !password) {
+      setError("Email and password are required");
+      setTimeout(() => setError(""), 3000);
+      setIsLoading(false);
+      return;
+    }
     try {
       const res = await fetch("/api/login", {
         method: "POST",
@@ -33,21 +42,27 @@ const Register = () => {
         console.log(data.user)
         setError("Login successful");
         setTimeout(() => setError(""), 3000);
+        router.push('/')
+        setIsLoading(false);
       } else {
         setError(data.message);
         setTimeout(() => setError(""), 3000);
+        setIsLoading(false)
       }
     } catch (error) {
       setError("An error occurred during login.");
       setTimeout(() => setError(""), 3000);
+      setIsLoading(false);
     }
   };
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (!regEmail || !regName || !regPhone || !regPassword) {
       setError("All fields are required");
       setTimeout(() => setError(""), 3000);
+      setIsLoading(false);
       return;
     }
     try {
@@ -64,21 +79,24 @@ const Register = () => {
       });
       const result = await response.json();
       if (result.success) {
+        setIsLoading(false);
         setError("Sign up successful - proceed to login page");
         setTimeout(() => setError(""), 3000);
         setIsSignUp(false);
       } else {
         setError("Failed to register");
         setTimeout(() => setError(""), 3000);
+        setIsLoading(false);
       }
     } catch (error) {
       setError("Error occurred during sign up");
       setTimeout(() => setError(""), 3000);
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="bg-main-bg h-[90vh] text-white">
+    <div className="bg-main-bg h-[100vh] text-white">
       <div className="pt-20 w-[350px] ml-3 lg:ml-[200px] lg:w-[550px] xl:ml-[480px]">
         <Card>
           <form className="py-5 text-start ">
@@ -87,68 +105,134 @@ const Register = () => {
                 <h1 className="text-3xl font-bold text-center lg:text-5xl">
                   Sign Up
                 </h1>
-                <div className="text-start mt-5 mx-5">
-                  <label
-                    htmlFor="name"
-                    className="text-xl font-bold lg:text-3xl"
-                  >
-                    Name:
-                  </label>
+                <div className="wave-group mt-5 mx-5">
                   <input
+                    required
                     type="text"
-                    id="name"
-                    className="input w-[300px] lg:w-[500px]"
+                    className="input"
                     value={regName}
                     onChange={(e) => setRegName(e.target.value)}
                   />
-                </div>
-                <div className="text-start mt-2 mx-5">
-                  <label
-                    htmlFor="email"
-                    className="text-xl font-bold lg:text-3xl"
-                  >
-                    Email:
+                  <span className="bar"></span>
+                  <label className="label">
+                    <span className="label-char" style={{ "--index": 0 }}>
+                      N
+                    </span>
+                    <span className="label-char" style={{ "--index": 1 }}>
+                      a
+                    </span>
+                    <span className="label-char" style={{ "--index": 2 }}>
+                      m
+                    </span>
+                    <span className="label-char" style={{ "--index": 3 }}>
+                      e
+                    </span>
                   </label>
+                </div>
+                <div className="wave-group mt-5 mx-5">
                   <input
-                    type="email"
-                    id="email"
-                    className="input w-[300px] lg:w-[500px]"
+                    required
+                    type="text"
+                    className="input"
                     value={regEmail}
                     onChange={(e) => setRegEmail(e.target.value)}
                   />
-                </div>
-                <div className="text-start mt-2 mx-5">
-                  <label
-                    htmlFor="phone"
-                    className="text-xl font-bold lg:text-3xl"
-                  >
-                    Phone:
+                  <span className="bar"></span>
+                  <label className="label">
+                    <span className="label-char" style={{ "--index": 0 }}>
+                      E
+                    </span>
+                    <span className="label-char" style={{ "--index": 1 }}>
+                      m
+                    </span>
+                    <span className="label-char" style={{ "--index": 2 }}>
+                      a
+                    </span>
+                    <span className="label-char" style={{ "--index": 3 }}>
+                      i
+                    </span>
+                    <span className="label-char" style={{ "--index": 3 }}>
+                      l
+                    </span>
                   </label>
+                </div>
+                <div className="wave-group mt-5 mx-5">
                   <input
-                    type="number"
-                    id="phone"
-                    className="input w-[300px] lg:w-[500px]"
+                    required
+                    type="text"
+                    className="input"
                     value={regPhone}
                     onChange={(e) => setRegPhone(e.target.value)}
                   />
-                </div>
-                <div className="text-start mt-2 mx-5">
-                  <label
-                    htmlFor="password"
-                    className="text-xl font-bold lg:text-3xl"
-                  >
-                    Password:
+                  <span className="bar"></span>
+                  <label className="label">
+                    <span className="label-char" style={{ "--index": 0 }}>
+                      p
+                    </span>
+                    <span className="label-char" style={{ "--index": 1 }}>
+                      h
+                    </span>
+                    <span className="label-char" style={{ "--index": 2 }}>
+                      o
+                    </span>
+                    <span className="label-char" style={{ "--index": 2 }}>
+                      n
+                    </span>
+                    <span className="label-char" style={{ "--index": 3 }}>
+                      e
+                    </span>
                   </label>
+                </div>
+                <div className="wave-group mt-5 mx-5">
                   <input
-                    type="password"
-                    id="password"
-                    className="input w-[300px] lg:w-[500px]"
+                    required
+                    type="text"
+                    className="input"
                     value={regPassword}
                     onChange={(e) => setRegPassword(e.target.value)}
                   />
+                  <span className="bar"></span>
+                  <label className="label">
+                    <span className="label-char" style={{ "--index": 0 }}>
+                      P
+                    </span>
+                    <span className="label-char" style={{ "--index": 1 }}>
+                      a
+                    </span>
+                    <span className="label-char" style={{ "--index": 2 }}>
+                      s
+                    </span>
+                    <span className="label-char" style={{ "--index": 3 }}>
+                      s
+                    </span>
+                    <span className="label-char" style={{ "--index": 4 }}>
+                      w
+                    </span>
+                    <span className="label-char" style={{ "--index": 5 }}>
+                      o
+                    </span>
+                    <span className="label-char" style={{ "--index": 6 }}>
+                      r
+                    </span>
+                    <span className="label-char" style={{ "--index": 7 }}>
+                      d
+                    </span>
+                  </label>
                 </div>
-                <div className="mt-10 text-center">
-                  <Button onClick={handleSignUp}>
+                <p className="mx-5 mt-3">
+                  Have an account already?{" "}
+                  <a
+                    className="underline cursor-pointer"
+                    onClick={() => setIsSignUp(false)}
+                  >
+                    Log in
+                  </a>
+                </p>
+                <div className="mt-5 text-center">
+                  <Button
+                    styles={"border-white border w-[150px] py-2"}
+                    onClick={handleSignUp}
+                  >
                     <span className="px-5 lg:text-2xl">Sign up</span>
                   </Button>
                 </div>
@@ -158,35 +242,68 @@ const Register = () => {
                 <h1 className="text-3xl font-bold text-center lg:text-5xl">
                   Log In
                 </h1>
-                <div className="mx-5 mt-5">
-                  <label
-                    htmlFor="email"
-                    className="text-xl font-bold lg:text-3xl"
-                  >
-                    Email:
-                  </label>
+                <div className="wave-group my-5 mx-5">
                   <input
-                    type="email"
-                    id="email"
-                    className="input w-[300px] lg:w-[500px]"
+                    required
+                    type="text"
+                    className="input"
                     value={userEmail}
                     onChange={(e) => setUserEmail(e.target.value)}
                   />
-                </div>
-                <div className="mx-5 mt-2">
-                  <label
-                    htmlFor="password"
-                    className="text-xl font-bold lg:text-3xl"
-                  >
-                    Password:
+                  <span className="bar"></span>
+                  <label className="label">
+                    <span className="label-char" style={{ "--index": 0 }}>
+                      E
+                    </span>
+                    <span className="label-char" style={{ "--index": 1 }}>
+                      m
+                    </span>
+                    <span className="label-char" style={{ "--index": 2 }}>
+                      a
+                    </span>
+                    <span className="label-char" style={{ "--index": 3 }}>
+                      i
+                    </span>
+                    <span className="label-char" style={{ "--index": 4 }}>
+                      l
+                    </span>
                   </label>
+                </div>
+                <div className="wave-group mt-7 mx-5">
                   <input
-                    type="password"
-                    id="password"
-                    className="input w-[300px] lg:w-[500px]"
+                    required
+                    type="text"
+                    className="input"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
+                  <span className="bar"></span>
+                  <label className="label">
+                    <span className="label-char" style={{ "--index": 0 }}>
+                      P
+                    </span>
+                    <span className="label-char" style={{ "--index": 1 }}>
+                      a
+                    </span>
+                    <span className="label-char" style={{ "--index": 2 }}>
+                      s
+                    </span>
+                    <span className="label-char" style={{ "--index": 3 }}>
+                      s
+                    </span>
+                    <span className="label-char" style={{ "--index": 4 }}>
+                      w
+                    </span>
+                    <span className="label-char" style={{ "--index": 5 }}>
+                      o
+                    </span>
+                    <span className="label-char" style={{ "--index": 6 }}>
+                      r
+                    </span>
+                    <span className="label-char" style={{ "--index": 7 }}>
+                      d
+                    </span>
+                  </label>
                 </div>
                 <div className="mt-10 text-center">
                   <Button onClick={handleSignIn}>
@@ -197,15 +314,7 @@ const Register = () => {
             )}
             <div className="mt-4 text-center lg:text-2xl">
               {isSignUp ? (
-                <span>
-                  Have an account already?{" "}
-                  <a
-                    className="underline cursor-pointer"
-                    onClick={() => setIsSignUp(false)}
-                  >
-                    Log in
-                  </a>
-                </span>
+                <></>
               ) : (
                 <span>
                   Don't have an account?{" "}

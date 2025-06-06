@@ -5,6 +5,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { FaMinus, FaPen } from "react-icons/fa";
 import { UserContext } from "../../components/userContext";
 import Link from "next/link";
+import useTracker from "../../lib/useTracker";
 
 const ProfilePage = () => {
   const [image, setImage] = useState(null);
@@ -17,6 +18,7 @@ const ProfilePage = () => {
   const [userBio, setUserBio] = useState(
     <p className="bio">A guest user exploring the website</p>
   );
+  useTracker('profile page')
 
   const { user, updateUser } = useContext(UserContext);
 
@@ -33,7 +35,16 @@ const ProfilePage = () => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
-    setPreview(URL.createObjectURL(file));
+
+    // Convert the image file to a base64 string
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setPreview(reader.result); // Base64 string
+    };
+    if (file) {
+      reader.readAsDataURL(file); // Read file as base64
+    }
+    // setPreview(URL.createObjectURL(file));
   };
 
   const handleUpload = async () => {
@@ -45,30 +56,42 @@ const ProfilePage = () => {
       return;
     }
 
-    const formData = new FormData();
-    formData.append("file", image);
+    // Send base64 image to the server
+    const base64Image = preview; // The base64 image string from the reader
 
+    try {
+      const response = await fetch("/api/upload", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "user-id": user._id,
+        },
+        body: JSON.stringify({ image: base64Image }), // Send base64 image
+      });
 
-    const response = await fetch("/api/upload", {
-      method: "POST",
-      headers: {
-        'user-id': user._id
-      },
-      body: formData,
-    });
-
-    if (response.ok) {
       const data = await response.json();
-      updateUser({ image: data.imageUrl }); // Update image in the context
+
+      if (response.ok) {
+        updateUser({ image: data.imageUrl }); // Update user context with base64 image
+        setUploadMessage(
+          <p className="text-xl text-green-500">Image uploaded successfully!</p>
+        );
+      } else {
+        setUploadMessage(
+          <p className="text-xl text-red-500">Failed to upload image.</p>
+        );
+      }
+
+      // Reset message after 3 seconds
+      setTimeout(() => setUploadMessage(""), 3000);
+    } catch (error) {
       setUploadMessage(
-        <p className="text-xl text-green-500">Image uploaded successfully!</p>
-      );
-    } else {
-      setUploadMessage(
-        <p className="text-xl text-red-500">Failed to upload image.</p>
+        <p className="text-xl text-red-500">Error uploading image.</p>
       );
     }
   };
+
+
 
   const profileBtn = () => {
     const uploadImage = document.querySelector(".uploadImage");

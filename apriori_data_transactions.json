@@ -1,0 +1,2217 @@
+[
+  {
+    "transactionId": "tx1",
+    "userId": "user29",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "3",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx2",
+    "userId": "user68",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "6",
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx3",
+    "userId": "user86",
+    "isRegistered": false,
+    "products": [
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx4",
+    "userId": "user31",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx5",
+    "userId": "user2",
+    "isRegistered": true,
+    "products": [
+      "2",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx6",
+    "userId": "user88",
+    "isRegistered": false,
+    "products": [
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx7",
+    "userId": "user96",
+    "isRegistered": false,
+    "products": [
+      "5",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx8",
+    "userId": "user56",
+    "isRegistered": false,
+    "products": [
+      "4",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx9",
+    "userId": "user64",
+    "isRegistered": false,
+    "products": [
+      "1",
+      "10",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx10",
+    "userId": "user100",
+    "isRegistered": false,
+    "products": [
+      "15",
+      "15",
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx11",
+    "userId": "user24",
+    "isRegistered": true,
+    "products": [
+      "5",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx12",
+    "userId": "user53",
+    "isRegistered": false,
+    "products": [
+      "8",
+      "13",
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx13",
+    "userId": "user16",
+    "isRegistered": true,
+    "products": [
+      "11",
+      "3",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx14",
+    "userId": "user56",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "11",
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx15",
+    "userId": "user16",
+    "isRegistered": true,
+    "products": [
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx16",
+    "userId": "user14",
+    "isRegistered": true,
+    "products": [
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx17",
+    "userId": "user8",
+    "isRegistered": true,
+    "products": [
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx18",
+    "userId": "user93",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "12",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx19",
+    "userId": "user60",
+    "isRegistered": false,
+    "products": [
+      "12",
+      "9",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx20",
+    "userId": "user22",
+    "isRegistered": true,
+    "products": [
+      "4",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx21",
+    "userId": "user83",
+    "isRegistered": false,
+    "products": [
+      "12",
+      "9",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx22",
+    "userId": "user53",
+    "isRegistered": false,
+    "products": [
+      "1",
+      "10",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx23",
+    "userId": "user6",
+    "isRegistered": true,
+    "products": [
+      "12",
+      "12",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx24",
+    "userId": "user53",
+    "isRegistered": false,
+    "products": [
+      "13",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx25",
+    "userId": "user13",
+    "isRegistered": true,
+    "products": [
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx26",
+    "userId": "user5",
+    "isRegistered": true,
+    "products": [
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx27",
+    "userId": "user6",
+    "isRegistered": true,
+    "products": [
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx28",
+    "userId": "user39",
+    "isRegistered": true,
+    "products": [
+      "14",
+      "14",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx29",
+    "userId": "user61",
+    "isRegistered": false,
+    "products": [
+      "11",
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx30",
+    "userId": "user30",
+    "isRegistered": true,
+    "products": [
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx31",
+    "userId": "user75",
+    "isRegistered": false,
+    "products": [
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx32",
+    "userId": "user42",
+    "isRegistered": true,
+    "products": [
+      "3",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx33",
+    "userId": "user48",
+    "isRegistered": true,
+    "products": [
+      "15",
+      "5",
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx34",
+    "userId": "user44",
+    "isRegistered": true,
+    "products": [
+      "5",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx35",
+    "userId": "user93",
+    "isRegistered": false,
+    "products": [
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx36",
+    "userId": "user42",
+    "isRegistered": true,
+    "products": [
+      "14",
+      "1",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx37",
+    "userId": "user76",
+    "isRegistered": false,
+    "products": [
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx38",
+    "userId": "user65",
+    "isRegistered": false,
+    "products": [
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx39",
+    "userId": "user94",
+    "isRegistered": false,
+    "products": [
+      "1",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx40",
+    "userId": "user50",
+    "isRegistered": true,
+    "products": [
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx41",
+    "userId": "user38",
+    "isRegistered": true,
+    "products": [
+      "6",
+      "12",
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx42",
+    "userId": "user84",
+    "isRegistered": false,
+    "products": [
+      "4",
+      "10",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx43",
+    "userId": "user80",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "11",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx44",
+    "userId": "user20",
+    "isRegistered": true,
+    "products": [
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx45",
+    "userId": "user41",
+    "isRegistered": true,
+    "products": [
+      "13",
+      "4",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx46",
+    "userId": "user31",
+    "isRegistered": true,
+    "products": [
+      "4",
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx47",
+    "userId": "user52",
+    "isRegistered": false,
+    "products": [
+      "2",
+      "2",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx48",
+    "userId": "user49",
+    "isRegistered": true,
+    "products": [
+      "9",
+      "10",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx49",
+    "userId": "user94",
+    "isRegistered": false,
+    "products": [
+      "4",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx50",
+    "userId": "user35",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "10",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx51",
+    "userId": "user42",
+    "isRegistered": true,
+    "products": [
+      "9",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx52",
+    "userId": "user32",
+    "isRegistered": true,
+    "products": [
+      "7",
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx53",
+    "userId": "user78",
+    "isRegistered": false,
+    "products": [
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx54",
+    "userId": "user48",
+    "isRegistered": true,
+    "products": [
+      "11",
+      "10",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx55",
+    "userId": "user46",
+    "isRegistered": true,
+    "products": [
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx56",
+    "userId": "user23",
+    "isRegistered": true,
+    "products": [
+      "7",
+      "9",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx57",
+    "userId": "user32",
+    "isRegistered": true,
+    "products": [
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx58",
+    "userId": "user57",
+    "isRegistered": false,
+    "products": [
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx59",
+    "userId": "user23",
+    "isRegistered": true,
+    "products": [
+      "1",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx60",
+    "userId": "user66",
+    "isRegistered": false,
+    "products": [
+      "2",
+      "6",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx61",
+    "userId": "user76",
+    "isRegistered": false,
+    "products": [
+      "1",
+      "1",
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx62",
+    "userId": "user43",
+    "isRegistered": true,
+    "products": [
+      "15",
+      "3",
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx63",
+    "userId": "user98",
+    "isRegistered": false,
+    "products": [
+      "10",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx64",
+    "userId": "user59",
+    "isRegistered": false,
+    "products": [
+      "7",
+      "5",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx65",
+    "userId": "user46",
+    "isRegistered": true,
+    "products": [
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx66",
+    "userId": "user46",
+    "isRegistered": true,
+    "products": [
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx67",
+    "userId": "user52",
+    "isRegistered": false,
+    "products": [
+      "13",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx68",
+    "userId": "user97",
+    "isRegistered": false,
+    "products": [
+      "10",
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx69",
+    "userId": "user1",
+    "isRegistered": true,
+    "products": [
+      "1",
+      "13",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx70",
+    "userId": "user56",
+    "isRegistered": false,
+    "products": [
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx71",
+    "userId": "user90",
+    "isRegistered": false,
+    "products": [
+      "1",
+      "2",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx72",
+    "userId": "user44",
+    "isRegistered": true,
+    "products": [
+      "14",
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx73",
+    "userId": "user67",
+    "isRegistered": false,
+    "products": [
+      "4",
+      "11",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx74",
+    "userId": "user39",
+    "isRegistered": true,
+    "products": [
+      "14",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx75",
+    "userId": "user23",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "7",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx76",
+    "userId": "user38",
+    "isRegistered": true,
+    "products": [
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx77",
+    "userId": "user80",
+    "isRegistered": false,
+    "products": [
+      "15",
+      "15",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx78",
+    "userId": "user78",
+    "isRegistered": false,
+    "products": [
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx79",
+    "userId": "user64",
+    "isRegistered": false,
+    "products": [
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx80",
+    "userId": "user66",
+    "isRegistered": false,
+    "products": [
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx81",
+    "userId": "user44",
+    "isRegistered": true,
+    "products": [
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx82",
+    "userId": "user13",
+    "isRegistered": true,
+    "products": [
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx83",
+    "userId": "user72",
+    "isRegistered": false,
+    "products": [
+      "14",
+      "5",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx84",
+    "userId": "user36",
+    "isRegistered": true,
+    "products": [
+      "2",
+      "9",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx85",
+    "userId": "user40",
+    "isRegistered": true,
+    "products": [
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx86",
+    "userId": "user55",
+    "isRegistered": false,
+    "products": [
+      "4",
+      "9",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx87",
+    "userId": "user40",
+    "isRegistered": true,
+    "products": [
+      "7",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx88",
+    "userId": "user95",
+    "isRegistered": false,
+    "products": [
+      "5",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx89",
+    "userId": "user28",
+    "isRegistered": true,
+    "products": [
+      "2",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx90",
+    "userId": "user6",
+    "isRegistered": true,
+    "products": [
+      "15",
+      "7",
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx91",
+    "userId": "user27",
+    "isRegistered": true,
+    "products": [
+      "15",
+      "7",
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx92",
+    "userId": "user53",
+    "isRegistered": false,
+    "products": [
+      "9",
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx93",
+    "userId": "user74",
+    "isRegistered": false,
+    "products": [
+      "14",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx94",
+    "userId": "user74",
+    "isRegistered": false,
+    "products": [
+      "11",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx95",
+    "userId": "user88",
+    "isRegistered": false,
+    "products": [
+      "8",
+      "14",
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx96",
+    "userId": "user25",
+    "isRegistered": true,
+    "products": [
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx97",
+    "userId": "user85",
+    "isRegistered": false,
+    "products": [
+      "15",
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx98",
+    "userId": "user10",
+    "isRegistered": true,
+    "products": [
+      "2",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx99",
+    "userId": "user59",
+    "isRegistered": false,
+    "products": [
+      "7",
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx100",
+    "userId": "user86",
+    "isRegistered": false,
+    "products": [
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx101",
+    "userId": "user93",
+    "isRegistered": false,
+    "products": [
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx102",
+    "userId": "user36",
+    "isRegistered": true,
+    "products": [
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx103",
+    "userId": "user53",
+    "isRegistered": false,
+    "products": [
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx104",
+    "userId": "user45",
+    "isRegistered": true,
+    "products": [
+      "3",
+      "9",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx105",
+    "userId": "user81",
+    "isRegistered": false,
+    "products": [
+      "7",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx106",
+    "userId": "user7",
+    "isRegistered": true,
+    "products": [
+      "12",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx107",
+    "userId": "user89",
+    "isRegistered": false,
+    "products": [
+      "2",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx108",
+    "userId": "user71",
+    "isRegistered": false,
+    "products": [
+      "11",
+      "10",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx109",
+    "userId": "user13",
+    "isRegistered": true,
+    "products": [
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx110",
+    "userId": "user86",
+    "isRegistered": false,
+    "products": [
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx111",
+    "userId": "user12",
+    "isRegistered": true,
+    "products": [
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx112",
+    "userId": "user1",
+    "isRegistered": true,
+    "products": [
+      "4",
+      "15",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx113",
+    "userId": "user19",
+    "isRegistered": true,
+    "products": [
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx114",
+    "userId": "user91",
+    "isRegistered": false,
+    "products": [
+      "12",
+      "2",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx115",
+    "userId": "user53",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "15",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx116",
+    "userId": "user21",
+    "isRegistered": true,
+    "products": [
+      "1",
+      "15",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx117",
+    "userId": "user17",
+    "isRegistered": true,
+    "products": [
+      "4",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx118",
+    "userId": "user41",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx119",
+    "userId": "user69",
+    "isRegistered": false,
+    "products": [
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx120",
+    "userId": "user64",
+    "isRegistered": false,
+    "products": [
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx121",
+    "userId": "user3",
+    "isRegistered": true,
+    "products": [
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx122",
+    "userId": "user13",
+    "isRegistered": true,
+    "products": [
+      "7",
+      "14",
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx123",
+    "userId": "user66",
+    "isRegistered": false,
+    "products": [
+      "1",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx124",
+    "userId": "user94",
+    "isRegistered": false,
+    "products": [
+      "6",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx125",
+    "userId": "user46",
+    "isRegistered": true,
+    "products": [
+      "5",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx126",
+    "userId": "user15",
+    "isRegistered": true,
+    "products": [
+      "7",
+      "5",
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx127",
+    "userId": "user6",
+    "isRegistered": true,
+    "products": [
+      "5",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx128",
+    "userId": "user38",
+    "isRegistered": true,
+    "products": [
+      "9",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx129",
+    "userId": "user52",
+    "isRegistered": false,
+    "products": [
+      "11",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx130",
+    "userId": "user81",
+    "isRegistered": false,
+    "products": [
+      "5",
+      "10",
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx131",
+    "userId": "user99",
+    "isRegistered": false,
+    "products": [
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx132",
+    "userId": "user3",
+    "isRegistered": true,
+    "products": [
+      "6",
+      "12",
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx133",
+    "userId": "user20",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "13",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx134",
+    "userId": "user34",
+    "isRegistered": true,
+    "products": [
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx135",
+    "userId": "user76",
+    "isRegistered": false,
+    "products": [
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx136",
+    "userId": "user27",
+    "isRegistered": true,
+    "products": [
+      "3",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx137",
+    "userId": "user27",
+    "isRegistered": true,
+    "products": [
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx138",
+    "userId": "user72",
+    "isRegistered": false,
+    "products": [
+      "5",
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx139",
+    "userId": "user9",
+    "isRegistered": true,
+    "products": [
+      "13",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx140",
+    "userId": "user34",
+    "isRegistered": true,
+    "products": [
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx141",
+    "userId": "user99",
+    "isRegistered": false,
+    "products": [
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx142",
+    "userId": "user99",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "1",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx143",
+    "userId": "user76",
+    "isRegistered": false,
+    "products": [
+      "4",
+      "1",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx144",
+    "userId": "user11",
+    "isRegistered": true,
+    "products": [
+      "14",
+      "5",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx145",
+    "userId": "user13",
+    "isRegistered": true,
+    "products": [
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx146",
+    "userId": "user26",
+    "isRegistered": true,
+    "products": [
+      "9",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx147",
+    "userId": "user4",
+    "isRegistered": true,
+    "products": [
+      "6",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx148",
+    "userId": "user73",
+    "isRegistered": false,
+    "products": [
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx149",
+    "userId": "user35",
+    "isRegistered": true,
+    "products": [
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx150",
+    "userId": "user33",
+    "isRegistered": true,
+    "products": [
+      "2",
+      "9",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx151",
+    "userId": "user89",
+    "isRegistered": false,
+    "products": [
+      "11",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx152",
+    "userId": "user11",
+    "isRegistered": true,
+    "products": [
+      "2",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx153",
+    "userId": "user40",
+    "isRegistered": true,
+    "products": [
+      "4",
+      "15",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx154",
+    "userId": "user91",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "3",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx155",
+    "userId": "user26",
+    "isRegistered": true,
+    "products": [
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx156",
+    "userId": "user84",
+    "isRegistered": false,
+    "products": [
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx157",
+    "userId": "user76",
+    "isRegistered": false,
+    "products": [
+      "11",
+      "11",
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx158",
+    "userId": "user6",
+    "isRegistered": true,
+    "products": [
+      "6",
+      "4",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx159",
+    "userId": "user44",
+    "isRegistered": true,
+    "products": [
+      "1",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx160",
+    "userId": "user66",
+    "isRegistered": false,
+    "products": [
+      "6",
+      "9",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx161",
+    "userId": "user88",
+    "isRegistered": false,
+    "products": [
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx162",
+    "userId": "user46",
+    "isRegistered": true,
+    "products": [
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx163",
+    "userId": "user38",
+    "isRegistered": true,
+    "products": [
+      "5",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx164",
+    "userId": "user84",
+    "isRegistered": false,
+    "products": [
+      "5",
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx165",
+    "userId": "user20",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx166",
+    "userId": "user72",
+    "isRegistered": false,
+    "products": [
+      "15",
+      "15",
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx167",
+    "userId": "user63",
+    "isRegistered": false,
+    "products": [
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx168",
+    "userId": "user9",
+    "isRegistered": true,
+    "products": [
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx169",
+    "userId": "user65",
+    "isRegistered": false,
+    "products": [
+      "1",
+      "1",
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx170",
+    "userId": "user53",
+    "isRegistered": false,
+    "products": [
+      "3",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx171",
+    "userId": "user54",
+    "isRegistered": false,
+    "products": [
+      "8",
+      "15",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx172",
+    "userId": "user1",
+    "isRegistered": true,
+    "products": [
+      "1",
+      "11",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx173",
+    "userId": "user64",
+    "isRegistered": false,
+    "products": [
+      "13",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx174",
+    "userId": "user1",
+    "isRegistered": true,
+    "products": [
+      "6",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx175",
+    "userId": "user42",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "11",
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx176",
+    "userId": "user57",
+    "isRegistered": false,
+    "products": [
+      "6",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx177",
+    "userId": "user91",
+    "isRegistered": false,
+    "products": [
+      "9",
+      "5"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx178",
+    "userId": "user82",
+    "isRegistered": false,
+    "products": [
+      "14",
+      "2",
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx179",
+    "userId": "user49",
+    "isRegistered": true,
+    "products": [
+      "7",
+      "12",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx180",
+    "userId": "user15",
+    "isRegistered": true,
+    "products": [
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx181",
+    "userId": "user24",
+    "isRegistered": true,
+    "products": [
+      "8",
+      "10"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx182",
+    "userId": "user76",
+    "isRegistered": false,
+    "products": [
+      "9",
+      "13",
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx183",
+    "userId": "user18",
+    "isRegistered": true,
+    "products": [
+      "15",
+      "3",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx184",
+    "userId": "user26",
+    "isRegistered": true,
+    "products": [
+      "5",
+      "8",
+      "4"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx185",
+    "userId": "user93",
+    "isRegistered": false,
+    "products": [
+      "11",
+      "8"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx186",
+    "userId": "user44",
+    "isRegistered": true,
+    "products": [
+      "10",
+      "6"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx187",
+    "userId": "user79",
+    "isRegistered": false,
+    "products": [
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx188",
+    "userId": "user90",
+    "isRegistered": false,
+    "products": [
+      "2",
+      "11",
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx189",
+    "userId": "user47",
+    "isRegistered": true,
+    "products": [
+      "5",
+      "1",
+      "13"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx190",
+    "userId": "user29",
+    "isRegistered": true,
+    "products": [
+      "15",
+      "3",
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx191",
+    "userId": "user68",
+    "isRegistered": false,
+    "products": [
+      "15",
+      "14",
+      "7"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx192",
+    "userId": "user2",
+    "isRegistered": true,
+    "products": [
+      "3"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx193",
+    "userId": "user84",
+    "isRegistered": false,
+    "products": [
+      "5",
+      "12",
+      "11"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx194",
+    "userId": "user39",
+    "isRegistered": true,
+    "products": [
+      "15"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx195",
+    "userId": "user8",
+    "isRegistered": true,
+    "products": [
+      "2",
+      "9"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx196",
+    "userId": "user81",
+    "isRegistered": false,
+    "products": [
+      "12"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx197",
+    "userId": "user100",
+    "isRegistered": false,
+    "products": [
+      "15",
+      "1"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx198",
+    "userId": "user33",
+    "isRegistered": true,
+    "products": [
+      "10",
+      "9",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx199",
+    "userId": "user1",
+    "isRegistered": true,
+    "products": [
+      "9",
+      "14"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  },
+  {
+    "transactionId": "tx200",
+    "userId": "user84",
+    "isRegistered": false,
+    "products": [
+      "12",
+      "4",
+      "2"
+    ],
+    "date": "2025-06-06",
+    "segmentLabel": "casual"
+  }
+]
