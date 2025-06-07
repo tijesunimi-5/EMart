@@ -175,7 +175,7 @@ const CartPage = () => {
   };
 
   return (
-    <div className="relative pt-14 bg-main-bg text-white overflow-hidden min-h-screen">
+    <div className="relative pt-14 bg-main-bg text-white overflow-hidden ">
       <h1 className="text-4xl text-center underline font-bold">Cart</h1>
       {cart.length > 0 ? (
         <div className="xl:grid xl:grid-cols-2 xl:gap-6 p-4">
