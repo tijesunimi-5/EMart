@@ -56,8 +56,8 @@ const BACKEND_URL = "https://emart-apriori-algorithm.onrender.com";
 export async function getRecommendations(userItems) {
   try {
     console.log("Attempting to fetch rules from backend...");
-    // const response = await fetch(`${BACKEND_URL}/api/rules`);
-    const response = await fetch(`http://127.0.0.1:8000/api/rules`);
+    const response = await fetch(`${BACKEND_URL}/api/rules`);
+    // const response = await fetch(`http://127.0.0.1:8000/api/rules`);
 
     if (!response.ok) {
       const errorText = await response.text();
