@@ -113,8 +113,6 @@ body {
   /* backdrop-filter: blur(90px); */
   border-radius: 7px;
   border: 1px solid #fff;
-  padding-right: 5px;
-  padding-left: 5px;
 }
 .image {
   width: 350px;
@@ -242,7 +240,7 @@ body {
   filter: blur(1px);
 }
 .white,
-.border,
+#border,
 .darkBorderBg,
 .glow {
   max-height: 70px;
@@ -342,13 +340,13 @@ body {
   animation: rotate 4s linear infinite;
   transition: all 2s;
 }
-.border {
+#border {
   max-height: 59px;
   max-width: 303px;
   border-radius: 11px;
   filter: blur(0.5px);
 }
-.border::before {
+#border::before {
   content: "";
   z-index: -2;
   text-align: center;
@@ -570,9 +568,7 @@ body {
   .hero-text {
     margin-left: 30px;
   }
-  .btn {
-    margin-left: 50px;
-  }
+  
   .info-text {
     width: 390px;
   }

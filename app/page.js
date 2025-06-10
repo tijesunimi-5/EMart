@@ -57,11 +57,11 @@ const page = () => {
         {/* <h1 className="font-bold text-xl">Search for a product</h1> */}
         <div className="relative w-screen md:w-[630px] lg:w-[900px] xl:ml-[280px] flex justify-center items-center">
           {/* <input type="text" className="w-[300px] mx-8 mt-5" onClick={search} /> */}
-          <SearchInput onclick={search} /> 
+          <SearchInput onclick={search} />
         </div>
 
         {searchMessage}
-        <div className="searchResult mt-10 text-start px-8 flex overflow-hidden overflow-x-scroll my-10  rounded-md ml-2 md:w-[740px] lg:w-[980px] xl:w-[1400px] xl:ml-16">
+        <div className="searchResult mt-5 text-start px-8 flex overflow-hidden  my-10  rounded-md ml-2 md:w-[740px] lg:w-[980px] xl:w-[1400px] xl:ml-16">
           <div className="flex w-[2500px] justify-between">
             {searchResult &&
               searchResult.map((item) => (
@@ -97,37 +97,32 @@ const page = () => {
       <div className="products flex flex-col">
         <h1 className="font-bold text-3xl ml-7 lg:text-5xl">Products</h1>
 
-        <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:overflow-x-hidden xl:grid-cols-3 xl:gap-4">
-          {product.map((pro) => (
-            <div
-              key={pro.id}
-              className="prod mt-10 w-[350px] ml-3 md:w-[600px] md:ml-20 lg:w-[400px] lg:ml-12 lg:flex "
-            >
-              <Card key={pro.id}>
-                <div className="relative" key={pro.id}>
-                  <img
-                    src={pro.image}
-                    alt={pro.title}
-                    className="rounded-tr-md rounded-tl-md w-[350px] pro-image md:w-[600px] md:h-[450px] lg:w-[400px] lg:h-[350px]"
-                  />
-                </div>
-                <p className="mt-5">{pro.description}</p>
-                <p className="flex justify-between px-5 my-5">
-                  <span>Price: {pro.price}</span>{" "}
-                  <span>Rating: {pro.rating}</span>
+        <div className="mx-5 flex flex-col gap-10">
+          {product.map((items) => (
+            <Card key={items.id} styles={"relative w-[340px]"}>
+              <div className="relative">
+                <img src={items.image} className="w-[340px]" />
+                <p className="absolute top-0 rounded-bl-lg bg-black right-0 px-2 py-1">
+                  {items.availability}
                 </p>
-                <div className="my-2">
-                  <Button styles={'w-[120px] py-1 tracking-wider text-[15px]'}
-                    onClick={() => {
-                      handleAddToCart(pro);
-                    }}
-                    key={pro.id}
-                  >
-                    Add To Cart
-                  </Button>
-                </div>
-              </Card>
-            </div>
+                <p className="bg-black absolute bottom-0 rounded-tr-lg price px-2 py-1">
+                  N{items.price}
+                </p>
+              </div>
+              <div className="other_content flex flex-col justify-start items-start px-2 pt-4">
+                <h2 className="text-start font-bold text-[1.2em] pb-3">
+                  {items.title}
+                </h2>
+                <p className="text-start ">{items.description}</p>
+
+                <Button
+                  styles={"text-center mt-4 mb-2 px-5 ml-24"}
+                  onClick={() => handleAddToCart(items)}
+                >
+                  Add to cart
+                </Button>
+              </div>
+            </Card>
           ))}
         </div>
       </div>

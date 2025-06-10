@@ -334,7 +334,7 @@ const product = [
     price: 450000,
     category: ["Laptop", "DELL", "Latitude", "Electronics"],
     image: "/Dell_Latitude.jpg",
-    rating: 450000,
+    rating: 4.5,
     quantity: 6,
     brand: "Dell",
     availability: "in_stock",

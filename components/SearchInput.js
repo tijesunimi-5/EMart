@@ -3,8 +3,8 @@ import React from "react";
 
 const SearchInput = ({styles, onclick}) => {
   return (
-    <div>
-      <div className="grid"></div>
+    <div className="lg:w-[600px] lg:mt-10">
+      {/* <div className="grid"></div> */}
       <div id="poda">
         <div className="glow"></div>
         <div className="darkBorderBg"></div>
@@ -13,19 +13,19 @@ const SearchInput = ({styles, onclick}) => {
 
         <div className="white"></div>
 
-        <div className="border"></div>
+        <div className="" id="border"></div>
 
-        <div id="main">
+        <div id="main" className="">
           <input
             placeholder="Search..."
             type="text"
             name="text"
-            className="input searchInput"
+            className="input searchInput search lg:w-[600px] lg:mt-10"
           />
-          <div id="input-mask"></div>
-          <div id="pink-mask"></div>
-          <div className="filterBorder"></div>
-          <div id="filter-icon">
+          <div id="input-mask" className="lg:mt-10"></div>
+          <div id="pink-mask" className="lg:mt-10"></div>
+          <div className="filterBorder lg:mt-10" ></div>
+          <div id="filter-icon" className="lg:mt-10" onClick={onclick}>
             <svg
               preserveAspectRatio="none"
               height="27"
@@ -43,7 +43,7 @@ const SearchInput = ({styles, onclick}) => {
               ></path>
             </svg>
           </div>
-          <div id="search-icon" onClick={onclick}>
+          <div id="search-icon" className="lg:mt-10" onClick={onclick}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -54,6 +54,7 @@ const SearchInput = ({styles, onclick}) => {
               height="24"
               fill="none"
               className="feather feather-search"
+              onClick={onclick}
             >
               <circle stroke="url(#search)" r="8" cy="11" cx="11"></circle>
               <line

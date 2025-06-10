@@ -1,11 +1,13 @@
 import React from 'react'
 
-const Card = (props) => {
+const Card = ({children, styles, onclick, key}) => {
   return (
-    <div className='card text-white w-auto h-auto rounded-md  text-center overflow-hidden'>
-      {props.children}
+    <div key={key}
+      className={`card text-white rounded-md  text-center overflow-hidden ${styles}`} onClick={onclick}
+    >
+      {children}
     </div>
-  )
+  );
 }
 
 export default Card
