@@ -3,7 +3,7 @@ import React from "react";
 
 const SearchInput = ({styles, onclick}) => {
   return (
-    <div className="lg:w-[600px] lg:mt-10">
+    <div className="md:w-[500px] lg:w-[600px] lg:mt-10">
       {/* <div className="grid"></div> */}
       <div id="poda">
         <div className="glow"></div>
@@ -20,11 +20,11 @@ const SearchInput = ({styles, onclick}) => {
             placeholder="Search..."
             type="text"
             name="text"
-            className="input searchInput search lg:w-[600px] lg:mt-10"
+            className="input searchInput search md:w-[500px] lg:w-[600px] lg:mt-10"
           />
           <div id="input-mask" className="lg:mt-10"></div>
           <div id="pink-mask" className="lg:mt-10"></div>
-          <div className="filterBorder lg:mt-10" ></div>
+          <div className="filterBorder lg:mt-10"></div>
           <div id="filter-icon" className="lg:mt-10" onClick={onclick}>
             <svg
               preserveAspectRatio="none"

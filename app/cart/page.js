@@ -216,64 +216,73 @@ const CartPage = () => {
   }, [cart]);
 
   return (
-    <section className="h-[100%] bg-main-bg w-[100%]">
+    <section className="h-[100%] bg-main-bg w-[100%] overflow-x-hidden">
       {cart.length > 0 ? (
-        <div className="ml-3 pt-20">
-          {cart.map((item, idx) => (
-            <Card key={item.id} styles={"relative w-[350px]"}>
-              <div className="relative">
-                <img src={item.image} className="w-[350px]" />
-                <p className="absolute top-0 rounded-bl-lg bg-black right-0 px-2 py-1">
-                  {item.availability}
-                </p>
-                <p className="bg-black absolute bottom-0 rounded-tr-lg price px-2 py-1 font-bold tracking-wider">
-                  N{item.price.toLocaleString()}
-                </p>
-              </div>
-              <div className="other_content flex flex-col justify-start items-start px-2 pt-4">
-                <h2 className="text-start font-bold text-[1.5em] pb-3">
-                  {item.title}
-                </h2>
-                <p className="text-start text-[18px]">{item.description}</p>
-
-                <div className="specs mt-5 text-start">
-                  <h3 className="font-bold text-[1.2em] scale-y-110 pb-2">
-                    Specifications:
-                  </h3>
-                  {item.spec.map((specs) => (
-                    <p className="leading-6 text-[17px]">• {specs}</p>
-                  ))}
+        <div className="ml-3 pt-20  relative pb-40">
+          {/* Cart  */}
+          <div className="md:grid md:grid-cols-2 lg:gap-12 lg:ml-6 xl:grid-cols-3">
+            {cart.map((item, idx) => (
+              <Card
+                key={item.id}
+                styles={"relative w-[350px] h-full lg:w-[430px] xl:w-[450px]"}
+              >
+                <div className="relative">
+                  <img
+                    src={item.image}
+                    className="w-[350px] xl:w-[450px] lg:w-[430px]"
+                  />
+                  <p className="absolute top-0 rounded-bl-lg bg-black right-0 px-2 py-1">
+                    {item.availability}
+                  </p>
+                  <p className="bg-black absolute bottom-0 rounded-tr-lg price px-2 py-1 font-bold tracking-wider">
+                    N{item.price.toLocaleString()}
+                  </p>
                 </div>
+                <div className="other_content flex flex-col justify-start items-start px-2 pt-4">
+                  <h2 className="text-start font-bold text-[1.5em] pb-3">
+                    {item.title}
+                  </h2>
+                  <p className="text-start text-[18px]">{item.description}</p>
 
-                <div className="flex items-center justify-between mt-4 mb-3 w-full">
-                  <Button
-                    styles={"text-center px-5 border-red-500"}
-                    onClick={() => deleteItem(idx)}
-                  >
-                    Delete Item
-                  </Button>
+                  <div className="specs mt-5 text-start">
+                    <h3 className="font-bold text-[1.2em] scale-y-110 pb-2">
+                      Specifications:
+                    </h3>
+                    {item.spec.map((specs) => (
+                      <p className="leading-6 text-[17px]">• {specs}</p>
+                    ))}
+                  </div>
 
-                  <div className="flex justify-between w-[100px]">
+                  <div className="flex items-center justify-between mt-4 mb-3 w-full">
                     <Button
-                      styles={"border-green-500"}
-                      onClick={() => increaseQuantity(idx)}
+                      styles={"text-center px-5 border-red-500"}
+                      onClick={() => deleteItem(idx)}
                     >
-                      +
+                      Delete Item
                     </Button>
-                    <Button
-                      styles={"border-red-500 border-2 font-bold text-[18px]"}
-                      onClick={() => decreaseQuantity(idx)}
-                    >
-                      -
-                    </Button>
+
+                    <div className="flex justify-between w-[100px]">
+                      <Button
+                        styles={"border-green-500"}
+                        onClick={() => increaseQuantity(idx)}
+                      >
+                        +
+                      </Button>
+                      <Button
+                        styles={"border-red-500 border-2 font-bold text-[18px]"}
+                        onClick={() => decreaseQuantity(idx)}
+                      >
+                        -
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
           {/* // Recommendations Section */}
-          <div className="mt-8 text-white">
-            <h2 className="text-[1.6em] font-bold text-white">
+          <div className="mt-8 text-white md:w-[750px] md:mt-16 lg:w-full">
+            <h2 className="text-[1.6em] font-bold text-white md:mb-5">
               Recommended Products
             </h2>
             {loading ? (
@@ -281,14 +290,14 @@ const CartPage = () => {
             ) : error ? (
               <p>{error}</p>
             ) : recommendations.length > 0 ? (
-              <div>
+              <div className="md:grid md:grid-cols-2 gap-10 w-full lg:ml-6 xl:gap-4 xl:grid-cols-3">
                 {recommendations.map((item) => (
-                  <Card key={item.id} styles={"w-[350px]"}>
+                  <Card key={item.id} styles={"w-[350px] lg:w-[450px]"}>
                     <div className="relative">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-[350px] rounded-tr-md rounded-tl-md"
+                        className="w-[350px] rounded-tr-md rounded-tl-md lg:w-[450px]"
                       />
                       <p className="absolute bottom-0 rounded-tr-lg">
                         Price: N{item.price.toLocaleString()}
@@ -331,7 +340,7 @@ const CartPage = () => {
           </div>
 
           {/* Total Price */}
-          <div className="text-center border-t-2 border-white pb-10 mt-10 pt-2 text-2xl text-white font-bold w-[350px]">
+          <div className="text-center border-t-2 border-white pb-10 mt-10 pt-2 text-2xl text-white font-bold w-[350px] absolute bottom-0 md:w-full">
             <h2>Total Price: N{totalPrice.toLocaleString()}</h2>
             <div className="mt-3">
               <Button onClick={handleCheckout}>

@@ -13,6 +13,7 @@ const page = () => {
   const product = getAllProducts();
   const [searchMessage, setSearchMessage] = useState("");
   const [searchResult, setSearchResult] = useState([]);
+  const [addProductIndex, setAddProductIndex] = useState(null)
   const { addToCart } = useCart();
   const { addCart } = useTracker("home page");
 
@@ -40,6 +41,8 @@ const page = () => {
     }
   };
 
+  
+
   const handleAddToCart = async (product) => {
     addToCart(product);
     addCart({
@@ -53,10 +56,8 @@ const page = () => {
 
   return (
     <div className="bg-main-bg mt-5 pb-20 text-white">
-      <div className="pt-12 text-center">
-        {/* <h1 className="font-bold text-xl">Search for a product</h1> */}
-        <div className="relative w-screen md:w-[630px] lg:w-[900px] xl:ml-[280px] flex justify-center items-center">
-          {/* <input type="text" className="w-[300px] mx-8 mt-5" onClick={search} /> */}
+      <div className="pt-12 text-center pb-10">
+        <div className="relative w-screen md:w-[630px] lg:w-[900px] xl:ml-[280px] flex justify-center items-center md:ml-16 md:mt-5">
           <SearchInput onclick={search} />
         </div>
 
@@ -97,29 +98,29 @@ const page = () => {
       <div className="products flex flex-col">
         <h1 className="font-bold text-3xl ml-7 lg:text-5xl">Products</h1>
 
-        <div className="mx-5 flex flex-col gap-10">
+        <div className="mx-5 mt-8 gap-10 flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 lg:ml-16">
           {product.map((items) => (
-            <Card key={items.id} styles={"relative w-[340px]"}>
-              <div className="relative">
-                <img src={items.image} className="w-[340px]" />
+            <Card key={items.id} styles={"relative w-[340px] lg:w-[400px]"}>
+              <div className="relative w-full">
+                <img src={items.image} className="w-[340px] lg:w-[400px]" />
                 <p className="absolute top-0 rounded-bl-lg bg-black right-0 px-2 py-1">
                   {items.availability}
                 </p>
                 <p className="bg-black absolute bottom-0 rounded-tr-lg price px-2 py-1">
-                  N{items.price}
+                  N{items.price.toLocaleString()}
                 </p>
               </div>
               <div className="other_content flex flex-col justify-start items-start px-2 pt-4">
                 <h2 className="text-start font-bold text-[1.2em] pb-3">
                   {items.title}
                 </h2>
-                <p className="text-start ">{items.description}</p>
+                <p className="text-start">{items.description}</p>
 
                 <Button
-                  styles={"text-center mt-4 mb-2 px-5 ml-24"}
-                  onClick={() => handleAddToCart(items)}
+                  styles={"text-center mt-4 mb-2 px-5 ml-24 lg:ml-32"}
+                  onClick={() => {handleAddToCart(items), setAddProductIndex(items.id)}}
                 >
-                  Add to cart
+                  {addProductIndex === items.id ? "Added" : "Add to cart"}
                 </Button>
               </div>
             </Card>
@@ -137,7 +138,7 @@ const page = () => {
         This website uses cookies to track user behaviot for analytics and
         recommendations, in compliance with NDPR.
       </CookieConsent>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
